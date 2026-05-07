@@ -21,6 +21,7 @@
       --line-dark: #2a2a28;
       --green:     #3d5a3d;
       --green-soft:#4f7050;
+      --green-light:#a8c98c;
       --cream:     #f7f5f0;
     }
 
@@ -68,7 +69,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 6vh;
+      margin-bottom: 5vh;
     }
 
     .logo {
@@ -118,7 +119,7 @@
       text-transform: uppercase;
       background: transparent;
       align-self: flex-start;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .pill.dark { border-color: #6f8a6f; color: #a8c1a8; }
@@ -128,11 +129,12 @@
       font-family: 'Fraunces', serif;
       font-weight: 400;
       font-variation-settings: "opsz" 18, "SOFT" 30;
-      font-size: clamp(2.6rem, 5.2vw, 5.4rem);
+      font-size: clamp(2.4rem, 4.8vw, 5rem);
       line-height: 1.04;
       letter-spacing: -0.015em;
       color: var(--ink);
-      max-width: 22ch;
+      max-width: 24ch;
+      margin-bottom: 1.5rem;
     }
 
     .headline em {
@@ -142,175 +144,229 @@
     }
 
     .slide.dark .headline { color: var(--cream); }
-    .slide.dark .headline em { color: #a8c98c; }
+    .slide.dark .headline em { color: var(--green-light); }
 
     .lede {
       font-family: 'Inter', sans-serif;
       font-weight: 400;
-      font-size: clamp(0.92rem, 1.05vw, 1.05rem);
+      font-size: clamp(1rem, 1.2vw, 1.2rem);
       line-height: 1.55;
       color: var(--ink-soft);
-      max-width: 36ch;
+      max-width: 50ch;
+      margin-bottom: 4vh;
     }
 
-    .slide.dark .lede { color: rgba(247, 245, 240, 0.62); }
+    .slide.dark .lede { color: rgba(247, 245, 240, 0.72); }
 
-    .hero-row {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      gap: 4vw;
-      align-items: end;
-      margin-bottom: 5vh;
-    }
-
-    /* ---------- Cards (slide 2 + slide 3) ---------- */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.6rem;
-      margin-top: auto;
-    }
-
-    .card {
-      background: var(--surface);
-      border-radius: 14px;
-      padding: 1.8rem 1.6rem 1.7rem;
-      display: flex;
-      flex-direction: column;
-      min-height: 280px;
-      position: relative;
-      border: 1px solid var(--line);
-    }
-
-    .card-num {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      color: var(--ink-soft);
-      margin-bottom: 1.2rem;
-    }
-
-    .card-thumb {
-      height: 110px;
-      background: linear-gradient(135deg, #d8d8d2, #c4c4be);
-      border-radius: 8px;
-      margin-bottom: 1.4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-thumb svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    .card h3 {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(1.2rem, 1.5vw, 1.55rem);
-      line-height: 1.2;
-      color: var(--ink);
-      margin-bottom: 0.7rem;
-    }
-
-    .card p {
-      font-size: 0.88rem;
-      line-height: 1.55;
-      color: var(--ink-soft);
-      margin-top: auto;
-    }
-
-    .card-bullets {
-      list-style: none;
-      display: flex;
-      gap: 0.4rem;
-      margin-top: 1.2rem;
-    }
-
-    .card-bullets li {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--line);
-    }
-
-    .card-bullets li.active { background: var(--green); }
-
-    /* ---------- Slide 1 specific ---------- */
-    .meta-row {
+    /* ---------- Slide 1: facts grid ---------- */
+    .facts {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
+      gap: 1.4rem;
       margin-top: auto;
-      padding-top: 2.2rem;
-      border-top: 1px solid var(--line);
     }
 
-    .meta-item .label {
+    .fact {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.6rem 1.4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      min-height: 160px;
+    }
+
+    .fact-label {
       font-size: 0.7rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--ink-soft);
-      margin-bottom: 0.4rem;
+      color: var(--green);
+      font-weight: 500;
     }
 
-    .meta-item .value {
+    .fact-value {
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(1rem, 1.3vw, 1.3rem);
+      font-size: clamp(1.4rem, 1.9vw, 1.85rem);
+      line-height: 1.15;
       color: var(--ink);
     }
 
-    /* ---------- Slide 3: brand cards ---------- */
-    .brand-cards {
+    .fact-note {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--ink-soft);
+      margin-top: auto;
+    }
+
+    /* ---------- Slide 2: 3 step cards with bullets ---------- */
+    .steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.6rem;
       margin-top: auto;
     }
 
-    .brand-card {
+    .step {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 1.8rem 1.6rem;
       display: flex;
       flex-direction: column;
-      min-height: 220px;
+      min-height: 320px;
     }
 
-    .brand-card .num {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      color: var(--ink-soft);
-      margin-bottom: 1.5rem;
-    }
-
-    .brand-card h4 {
+    .step-num {
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-weight: 400;
-      font-size: 1.55rem;
-      color: var(--ink);
-      margin-bottom: 0.5rem;
+      font-size: 2.4rem;
+      color: var(--green);
+      line-height: 1;
+      margin-bottom: 0.8rem;
     }
 
-    .brand-card .role {
+    .step h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: clamp(1.4rem, 1.9vw, 1.85rem);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+
+    .step ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-top: auto;
+    }
+
+    .step ul li {
+      font-size: 0.95rem;
+      line-height: 1.45;
+      color: var(--ink);
+      padding-left: 1.4rem;
+      position: relative;
+    }
+
+    .step ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 16px;
+      height: 1.5px;
+      background: var(--green);
+    }
+
+    /* ---------- Slide 3: vision + match ---------- */
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4vw;
+      flex: 1;
+      align-items: start;
+      margin-top: 1vh;
+    }
+
+    .vision-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      margin-top: 1vh;
+    }
+
+    .vision-bullets li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 0.9rem;
+      align-items: start;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .vision-bullets li:last-child { border-bottom: none; }
+
+    .vision-bullets .bullet-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--green);
+      line-height: 1.3;
+    }
+
+    .vision-bullets .bullet-text {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+      line-height: 1.4;
+      color: var(--ink);
+    }
+
+    .vision-side {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.8rem 1.6rem;
+    }
+
+    .vision-side .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+    }
+
+    .vision-side h4 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.3rem, 1.6vw, 1.55rem);
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 1.3rem;
+    }
+
+    .match-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .match-list li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: baseline;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .match-list li:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .match-list .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .match-list .tag {
       font-size: 0.78rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--green);
-      margin-bottom: 1.2rem;
-    }
-
-    .brand-card p {
-      font-size: 0.88rem;
-      line-height: 1.55;
-      color: var(--ink-soft);
-      margin-top: auto;
     }
 
     /* ---------- Slide 4 (dark CTA) ---------- */
@@ -323,45 +379,65 @@
     .slide.dark .logo { color: var(--cream); }
     .slide.dark .logo-mark { border-color: var(--cream); color: var(--cream); }
 
-    .offer-grid {
+    .ask-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem 2rem;
-      margin: 4vh 0 5vh;
-      max-width: 1100px;
+      grid-template-columns: 1fr 1fr;
+      gap: 4vw;
+      margin-top: 2vh;
+      flex: 1;
     }
 
-    .offer-row {
-      display: grid;
-      grid-template-columns: 40px 1fr;
-      gap: 1.2rem;
-      padding: 1.1rem 0;
-      border-top: 1px solid var(--line-dark);
-      align-items: baseline;
+    .ask-block .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      font-weight: 500;
+      margin-bottom: 1.2rem;
     }
 
-    .offer-row:nth-last-child(-n+2) { border-bottom: 1px solid var(--line-dark); }
-
-    .offer-row .num {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.3rem;
-      color: #a8c98c;
-    }
-
-    .offer-row h4 {
+    .ask-block h3 {
       font-family: 'Fraunces', serif;
       font-weight: 400;
-      font-size: 1.15rem;
+      font-size: clamp(1.4rem, 1.8vw, 1.75rem);
+      line-height: 1.15;
       color: var(--cream);
-      margin-bottom: 0.3rem;
+      margin-bottom: 1.4rem;
     }
 
-    .offer-row p {
-      font-size: 0.85rem;
-      line-height: 1.5;
-      color: rgba(247, 245, 240, 0.62);
+    .ask-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .ask-list li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 0.8rem;
+      align-items: start;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--line-dark);
+      font-size: 0.95rem;
+      line-height: 1.45;
+      color: rgba(247, 245, 240, 0.85);
+    }
+
+    .ask-list li:last-child { border-bottom: none; }
+
+    .ask-list .check {
+      color: var(--green-light);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .ask-list strong {
+      color: var(--cream);
+      font-weight: 500;
     }
 
     .cta-block {
@@ -374,13 +450,13 @@
       border-top: 1px solid var(--line-dark);
     }
 
-    .cta-block .cta-text {
+    .cta-text {
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-weight: 300;
-      font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+      font-size: clamp(1.15rem, 1.5vw, 1.5rem);
       line-height: 1.4;
-      color: rgba(247, 245, 240, 0.85);
+      color: rgba(247, 245, 240, 0.9);
       max-width: 42ch;
     }
 
@@ -409,9 +485,10 @@
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-weight: 300;
-      font-size: 0.95rem;
-      color: rgba(247, 245, 240, 0.55);
-      margin-top: 1.2rem;
+      font-size: 0.9rem;
+      color: rgba(247, 245, 240, 0.6);
+      margin-top: 0.8rem;
+      text-align: right;
     }
 
     /* ---------- Navigation ---------- */
@@ -473,10 +550,8 @@
     }
 
     @media (max-width: 900px) {
-      .cards, .brand-cards { grid-template-columns: 1fr; }
-      .hero-row { grid-template-columns: 1fr; gap: 2vh; }
-      .meta-row { grid-template-columns: repeat(2, 1fr); }
-      .offer-grid { grid-template-columns: 1fr; }
+      .facts, .steps { grid-template-columns: 1fr 1fr; }
+      .vision-grid, .ask-grid { grid-template-columns: 1fr; gap: 3vh; }
       .cta-block { grid-template-columns: 1fr; gap: 1.5rem; }
       .slide { padding: 5vh 6vw; }
     }
@@ -485,7 +560,7 @@
 <body>
   <div class="deck" id="deck">
 
-    <!-- ============ SLIDE 1 ============ -->
+    <!-- ============ SLIDE 1: WAT ============ -->
     <section class="slide active" data-index="0">
       <div class="topbar">
         <div class="logo">
@@ -498,43 +573,45 @@
         </div>
       </div>
 
-      <span class="pill">The Camino Edition</span>
+      <span class="pill">Wat is dit?</span>
 
-      <div class="hero-row">
-        <h1 class="headline">
-          Drie founders,<br />
-          honderdvijftien kilometer,<br />
-          <em>één missie.</em>
-        </h1>
-        <p class="lede">
-          Deze zomer lopen drie AI-founders uit Amsterdam de
-          Camino van Tui naar Santiago. Onderweg bouwen we
-          live aan een AI-tool en doneren die aan stichting
-          MIND. Camera's draaien mee.
-        </p>
-      </div>
+      <h1 class="headline">
+        Drie founders lopen 115 km<br />
+        en bouwen onderweg een AI-tool<br />
+        voor <em>mentale gezondheid.</em>
+      </h1>
 
-      <div class="meta-row">
-        <div class="meta-item">
-          <div class="label">Wanneer</div>
-          <div class="value">Zomer 2026</div>
+      <p class="lede">
+        In het kort: wij zijn 3 AI-founders uit Amsterdam. Deze zomer
+        lopen we de Camino van Tui naar Santiago. Onderweg bouwen we
+        live een AI-tool — die we daarna gratis weggeven aan stichting MIND.
+      </p>
+
+      <div class="facts">
+        <div class="fact">
+          <span class="fact-label">Wie</span>
+          <span class="fact-value">3 AI‑founders</span>
+          <span class="fact-note">Caesar &amp; team — uit Amsterdam.</span>
         </div>
-        <div class="meta-item">
-          <div class="label">Waar</div>
-          <div class="value">Tui → Santiago</div>
+        <div class="fact">
+          <span class="fact-label">Wat</span>
+          <span class="fact-value">115 km lopen</span>
+          <span class="fact-note">Tui → Santiago de Compostela.</span>
         </div>
-        <div class="meta-item">
-          <div class="label">Voor</div>
-          <div class="value">Stichting MIND</div>
+        <div class="fact">
+          <span class="fact-label">Wanneer</span>
+          <span class="fact-value">Zomer 2026</span>
+          <span class="fact-note">Zes dagen, één rugzak.</span>
         </div>
-        <div class="meta-item">
-          <div class="label">Door</div>
-          <div class="value">3 founders, 1 crew</div>
+        <div class="fact">
+          <span class="fact-label">Voor wie</span>
+          <span class="fact-value">Stichting MIND</span>
+          <span class="fact-note">Voor mentale gezondheid.</span>
         </div>
       </div>
     </section>
 
-    <!-- ============ SLIDE 2 ============ -->
+    <!-- ============ SLIDE 2: HOE ============ -->
     <section class="slide" data-index="1">
       <div class="topbar">
         <div class="logo">
@@ -542,90 +619,55 @@
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>De visie</span>
+          <span>Wat we doen</span>
           <span>02 / 04</span>
         </div>
       </div>
 
-      <span class="pill">De visie</span>
+      <span class="pill">Wat we doen</span>
 
-      <div class="hero-row">
-        <h1 class="headline">
-          The world<br />
-          as our <em>office.</em>
-        </h1>
-        <p class="lede">
-          Niet bouwen vanuit een kantoor, maar onderweg —
-          lopend, reflecterend en creërend met AI. We laten
-          zien dat technologie ons niet verder van onszelf
-          hoeft te brengen, maar juist menselijker kan laten
-          werken en leven.
-        </p>
-      </div>
+      <h1 class="headline">
+        Lopen. Bouwen. <em>Doneren.</em>
+      </h1>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card-num">01</div>
-          <div class="card-thumb">
-            <svg viewBox="0 0 280 110" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                  <stop offset="0" stop-color="#cdd5c0" />
-                  <stop offset="1" stop-color="#9bb18b" />
-                </linearGradient>
-              </defs>
-              <rect width="280" height="110" fill="url(#g1)" />
-              <path d="M0 80 Q 70 50, 140 70 T 280 60 L 280 110 L 0 110 Z" fill="#7a9270" opacity="0.7" />
-              <path d="M0 95 Q 70 75, 140 85 T 280 80 L 280 110 L 0 110 Z" fill="#5a7558" />
-              <circle cx="220" cy="30" r="14" fill="#f4e7c8" />
-            </svg>
-          </div>
-          <h3>Lopen &amp; bouwen</h3>
-          <p>Live coderen onderweg met spraakcommando's en smart glasses. Geen bureau, wel een schelp en een pad.</p>
-          <ul class="card-bullets"><li class="active"></li><li></li><li></li><li></li></ul>
+      <p class="lede">
+        Drie simpele stappen. Geen kantoor, geen powerpoint — gewoon doen.
+      </p>
+
+      <div class="steps">
+        <article class="step">
+          <div class="step-num">01</div>
+          <h3>We lopen.</h3>
+          <ul>
+            <li>115 km in 6 dagen</li>
+            <li>Tui → Santiago</li>
+            <li>Eén rugzak. Geen kantoor.</li>
+          </ul>
         </article>
 
-        <article class="card">
-          <div class="card-num">02</div>
-          <div class="card-thumb">
-            <svg viewBox="0 0 280 110" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="280" height="110" fill="#e8e2d4" />
-              <g stroke="#3d5a3d" stroke-width="1.2" fill="none" opacity="0.65">
-                <circle cx="140" cy="55" r="20" />
-                <circle cx="140" cy="55" r="32" />
-                <circle cx="140" cy="55" r="44" />
-                <line x1="140" y1="11" x2="140" y2="99" />
-                <line x1="96" y1="55" x2="184" y2="55" />
-              </g>
-              <circle cx="140" cy="55" r="6" fill="#3d5a3d" />
-            </svg>
-          </div>
-          <h3>Doneren aan MIND</h3>
-          <p>De tool die we onderweg bouwen schenken we kosteloos aan stichting MIND — voor mensen die mentaal in de knoop zitten.</p>
-          <ul class="card-bullets"><li></li><li class="active"></li><li></li><li></li></ul>
+        <article class="step">
+          <div class="step-num">02</div>
+          <h3>We bouwen onderweg.</h3>
+          <ul>
+            <li>Een AI-tool, live gebouwd</li>
+            <li>Met spraak en smart glasses</li>
+            <li>Camera's draaien alles op</li>
+          </ul>
         </article>
 
-        <article class="card">
-          <div class="card-num">03</div>
-          <div class="card-thumb">
-            <svg viewBox="0 0 280 110" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="280" height="110" fill="#1a1a1a" />
-              <g fill="#f7f5f0" opacity="0.85">
-                <rect x="50" y="35" width="120" height="48" rx="4" fill="#2a2a28" stroke="#a8c98c" stroke-width="1" />
-                <polygon points="100,50 100,68 120,59" fill="#a8c98c" />
-              </g>
-              <circle cx="220" cy="35" r="3" fill="#a8c98c" />
-              <text x="200" y="80" fill="#a8c98c" font-family="Inter" font-size="8" letter-spacing="2">REC</text>
-            </svg>
-          </div>
-          <h3>Mini-docu</h3>
-          <p>Camera's draaien mee. De gesprekken, de struggle, het bouwen onderweg — een verhaal dat blijft hangen.</p>
-          <ul class="card-bullets"><li></li><li></li><li class="active"></li><li></li></ul>
+        <article class="step">
+          <div class="step-num">03</div>
+          <h3>We doneren.</h3>
+          <ul>
+            <li>Tool gaat gratis naar MIND</li>
+            <li>Voor mensen met mentale klachten</li>
+            <li>Plus: een mini-docu van de reis</li>
+          </ul>
         </article>
       </div>
     </section>
 
-    <!-- ============ SLIDE 3 ============ -->
+    <!-- ============ SLIDE 3: WAAROM ============ -->
     <section class="slide" data-index="2">
       <div class="topbar">
         <div class="logo">
@@ -633,52 +675,60 @@
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>Waarom jij, Marleen</span>
+          <span>Waarom</span>
           <span>03 / 04</span>
         </div>
       </div>
 
-      <span class="pill">Waarom jij, Marleen</span>
+      <span class="pill">Waarom we dit doen</span>
 
-      <div class="hero-row">
-        <h1 class="headline">
-          Geen sponsoring.<br />
-          Een <em>verhaal</em> waar<br />
-          je onderdeel van wordt.
-        </h1>
-        <p class="lede">
-          Jouw drie werelden raken precies wat dit project
-          drijft: ondernemerschap, vertrouwen, beweging en
-          lef. Daarom benaderen we jou — niet als logo op een
-          shirt, maar als partner in het verhaal.
-        </p>
-      </div>
+      <h1 class="headline">
+        Tech moet ons mensélijker maken.<br />
+        <em>Niet andersom.</em>
+      </h1>
 
-      <div class="brand-cards">
-        <article class="brand-card">
-          <div class="num">07</div>
-          <h4>Nxchange</h4>
-          <div class="role">Ondernemerschap</div>
-          <p>Investeren in betekenisvolle bedrijven — wij bouwen er live eentje.</p>
-        </article>
+      <div class="vision-grid">
+        <ul class="vision-bullets">
+          <li>
+            <span class="bullet-num">01</span>
+            <span class="bullet-text">We gedragen ons steeds meer als robots.</span>
+          </li>
+          <li>
+            <span class="bullet-num">02</span>
+            <span class="bullet-text">AI kan ons juist helpen om weer mens te zijn.</span>
+          </li>
+          <li>
+            <span class="bullet-num">03</span>
+            <span class="bullet-text">Daarom bouwen we onderweg, niet vanuit een kantoor.</span>
+          </li>
+          <li>
+            <span class="bullet-num">04</span>
+            <span class="bullet-text">The world as our office — letterlijk.</span>
+          </li>
+        </ul>
 
-        <article class="brand-card">
-          <div class="num">08</div>
-          <h4>Goldrepublic</h4>
-          <div class="role">Vertrouwen</div>
-          <p>Waarde die blijft. Een Camino is letterlijk een stap voor stap bewijs daarvan.</p>
-        </article>
-
-        <article class="brand-card">
-          <div class="num">09</div>
-          <h4>House of Founders</h4>
-          <div class="role">Community</div>
-          <p>Founders die elkaar verder brengen. Dit is content waar jouw community zich in herkent.</p>
-        </article>
+        <aside class="vision-side">
+          <div class="label">Waarom jij, Marleen</div>
+          <h4>Jouw drie werelden passen precies bij wat dit is.</h4>
+          <ul class="match-list">
+            <li>
+              <span class="brand">Nxchange</span>
+              <span class="tag">Ondernemerschap</span>
+            </li>
+            <li>
+              <span class="brand">Goldrepublic</span>
+              <span class="tag">Vertrouwen</span>
+            </li>
+            <li>
+              <span class="brand">House of Founders</span>
+              <span class="tag">Community &amp; lef</span>
+            </li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <!-- ============ SLIDE 4 (dark CTA) ============ -->
+    <!-- ============ SLIDE 4: DE VRAAG (dark) ============ -->
     <section class="slide dark" data-index="3">
       <div class="topbar">
         <div class="logo">
@@ -686,56 +736,49 @@
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>Wat krijg je terug</span>
+          <span>De vraag</span>
           <span>04 / 04</span>
         </div>
       </div>
 
-      <span class="pill dark">Partnership</span>
+      <span class="pill dark">Wat we vragen</span>
 
       <h1 class="headline">
-        Een partnership dat<br />
-        <em>blijft hangen.</em>
+        Word jij onze<br />
+        <em>partner in dit verhaal?</em>
       </h1>
 
-      <div class="offer-grid">
-        <div class="offer-row">
-          <span class="num">01</span>
-          <div>
-            <h4>Naam in de mini-docu</h4>
-            <p>Prominent verbonden aan een verhaal dat verder reikt dan een logo.</p>
-          </div>
+      <div class="ask-grid">
+        <div class="ask-block">
+          <div class="label">Wat we vragen</div>
+          <h3>Een sponsorbijdrage om dit mogelijk te maken.</h3>
+          <ul class="ask-list">
+            <li><span class="check">·</span><span><strong>Reis &amp; verblijf</strong> voor 3 founders + crew</span></li>
+            <li><span class="check">·</span><span><strong>Productie mini-docu</strong> (camera, edit, muziek)</span></li>
+            <li><span class="check">·</span><span><strong>Tech</strong> (smart glasses, AI-credits, software)</span></li>
+            <li><span class="check">·</span><span><strong>Donatie aan MIND</strong> namens de partners</span></li>
+          </ul>
         </div>
-        <div class="offer-row">
-          <span class="num">02</span>
-          <div>
-            <h4>Content voor je community</h4>
-            <p>Beelden, quotes en updates — klaar voor House of Founders.</p>
-          </div>
-        </div>
-        <div class="offer-row">
-          <span class="num">03</span>
-          <div>
-            <h4>Toegang tot het proces</h4>
-            <p>Live updates, een keynote of fireside chat na afloop, en de tool eerst zien.</p>
-          </div>
-        </div>
-        <div class="offer-row">
-          <span class="num">04</span>
-          <div>
-            <h4>Impact die je kunt claimen</h4>
-            <p>Je naam verbonden aan een gratis AI-tool voor MIND.</p>
-          </div>
+
+        <div class="ask-block">
+          <div class="label">Wat je terugkrijgt</div>
+          <h3>Geen logo op een shirt — een verhaal waar je in zit.</h3>
+          <ul class="ask-list">
+            <li><span class="check">·</span><span><strong>Naam &amp; merk</strong> in de mini-docu</span></li>
+            <li><span class="check">·</span><span><strong>Content</strong> klaar voor House of Founders</span></li>
+            <li><span class="check">·</span><span><strong>Keynote of fireside</strong> bij founders na afloop</span></li>
+            <li><span class="check">·</span><span><strong>Impact</strong>: jouw naam aan een gratis AI-tool voor MIND</span></li>
+          </ul>
         </div>
       </div>
 
       <div class="cta-block">
         <p class="cta-text">
-          Koffie volgende week? We komen graag bij je
-          langs — of zien je in House of Founders.
+          Volgende stap: 30 minuten koffie. Wij komen graag bij je
+          langs, of zien je in House of Founders.
         </p>
         <div>
-          <a class="cta-button" href="#">
+          <a class="cta-button" href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20koffie">
             Plan een koffie <span class="arrow">→</span>
           </a>
           <div class="signature">— Caesar &amp; team</div>
