@@ -1,11 +1,11 @@
-# Back to Being — Sponsorvoorstel
+# Back to Being: Sponsorvoorstel
 
-Een 6-slide sponsor-pitch voor het Camino-project **Back to Being**.
+Een sponsor-pitch voor het Camino-project **Back to Being** (HTML-deck, meerdere slides).
 
 > **The World as our Office.**
-> Drie AI-founders. 115 km. Tui → Santiago. Een AI-tool voor stichting MIND.
+> Drie AI-founders. 115 km. Tui naar Santiago. Een AI-tool voor stichting MIND.
 
-Statische HTML/CSS/JS — geen build, geen dependencies. Hostbaar op elke statische host.
+Statische HTML/CSS/JS. Geen build, geen dependencies. Hostbaar op elke statische host.
 
 ---
 
@@ -15,27 +15,28 @@ Dubbelklik `index.html`, of via een lokale server:
 
 ```bash
 python3 -m http.server 4173
-# → http://localhost:4173
+# http://localhost:4173
 ```
 
 ## Navigeren
 
 | Toets | Actie |
 |---|---|
-| `→` / `Space` | Volgende slide |
-| `←` | Vorige slide |
-| `Home` / `End` | Eerste / laatste slide |
+| Pijl rechts / Space | Volgende slide |
+| Pijl links | Vorige slide |
+| Home / End | Eerste / laatste slide |
 | Klik op dot | Spring naar slide |
 | Swipe (mobiel) | Vorige / volgende |
 
 ## Slide-structuur
 
-1. **Cover** — *The World as our Office.*
-2. **Wat is dit?** — Project in één zin + context (intro lede)
-3. **Het plan** — *Lopen. Bouwen. Doneren.* in drie stappen
-4. **Waarom** — *Tech moet ons menselijker maken. Niet andersom.*
-5. **Het doel** — €20.000 ophalen + breakdown waar het naartoe gaat
-6. **Word partner** — Wat je terugkrijgt + CTA (koffie / mail)
+1. **Cover** (*The World as our Office*)
+2. **Wat is dit?** Project in één zin + intro (lede)
+3. **Het plan** (*Lopen. Bouwen. Doneren*) in drie stappen
+4. **Waarom** (filosofie: kantoor naar buiten)
+5. **Het doel** €20.000 ophalen + waar het naartoe gaat
+6. **Word partner** wat je terugkrijgt + CTA
+7. **Contact** Laten we koffie drinken (mail + optioneel telefoon)
 
 ## Exporteren naar PDF
 
@@ -56,7 +57,7 @@ De print-styling zorgt dat elke slide op zijn eigen pagina komt zonder navigatie
 
 ```
 .
-├── index.html      # Het hele deck — 6 slides, styling, en navigatie-script
+├── index.html      # Het deck: slides, styling en navigatie-script
 ├── README.md       # Dit bestand
 └── .gitignore
 ```
@@ -64,9 +65,9 @@ De print-styling zorgt dat elke slide op zijn eigen pagina komt zonder navigatie
 ## Aanpassen
 
 - **Inhoud / copy:** alles in `index.html` tussen de `<section class="slide …">` tags
-- **Kleuren:** bovenin het `<style>` blok onder `:root` — `--green`, `--bg`, `--bg-dark`, etc.
-- **Typografie:** [Fraunces](https://fonts.google.com/specimen/Fraunces) voor koppen, [Inter](https://fonts.google.com/specimen/Inter) voor body — beide via Google Fonts
-- **Stijl-inspiratie:** [House of Founders](https://houseoffounders.com) — warme grijze achtergrond, klassieke serif met groen italic accent, pill tags, donker contrast-blok
+- **Kleuren:** bovenin het `<style>` blok onder `:root` (o.a. `--green`, `--bg`, `--bg-dark`)
+- **Typografie:** [Fraunces](https://fonts.google.com/specimen/Fraunces) voor koppen, [Inter](https://fonts.google.com/specimen/Inter) voor body (Google Fonts)
+- **Stijl-inspiratie:** [House of Founders](https://houseoffounders.com): warme grijze achtergrond, serif met groen accent, pill tags
 
 ---
 
@@ -81,13 +82,13 @@ git commit -m "Initial commit: Back to Being sponsor deck"
 git branch -M main
 ```
 
-### Optie A — GitHub via `gh` CLI
+### Optie A: GitHub via `gh` CLI
 
 ```bash
 gh repo create back-to-being-deck --public --source=. --remote=origin --push
 ```
 
-### Optie B — Handmatig (na repo aanmaken op GitHub/GitLab)
+### Optie B: Handmatig (na repo aanmaken op GitHub/GitLab)
 
 ```bash
 git remote add origin git@github.com:<jouw-username>/back-to-being-deck.git
@@ -106,7 +107,7 @@ Omdat het pure statische HTML is, werkt elke statische host out-of-the-box:
 3. Klaar. URL wordt: `https://<username>.github.io/<repo>/`
 
 ### Vercel / Netlify
-- Sleep de map naar [vercel.com/new](https://vercel.com/new) of [app.netlify.com/drop](https://app.netlify.com/drop) — het deployt direct.
+- Sleep de map naar [vercel.com/new](https://vercel.com/new) of [app.netlify.com/drop](https://app.netlify.com/drop). Deployt direct.
 - Geen configuratie nodig.
 
 ### Cloudflare Pages
@@ -122,6 +123,6 @@ Pure HTML + CSS + vanilla JS. Geen build step, geen dependencies, geen tracking.
 
 ## Contact
 
-**Contact:** Caesar.schoorl@gmail.com
+Caesar.schoorl@gmail.com
 
-Telefoon op slide 7: vul in het script onderaan van `index.html` de twee regels met `CONTACT_PHONE_*` — dan verschijnt de tel-regel automatisch.
+Telefoon op slide 7: vul in het script onderaan van `index.html` de twee regels met `CONTACT_PHONE_*`; dan verschijnt de tel-regel automatisch.
