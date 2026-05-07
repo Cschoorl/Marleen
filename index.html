@@ -379,11 +379,54 @@
     .slide.dark .logo { color: var(--cream); }
     .slide.dark .logo-mark { border-color: var(--cream); color: var(--cream); }
 
+    .goal-banner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 1.4rem 1.8rem;
+      background: rgba(168, 201, 140, 0.08);
+      border: 1px solid rgba(168, 201, 140, 0.28);
+      border-radius: 14px;
+      margin-bottom: 3vh;
+    }
+
+    .goal-amount {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      color: var(--green-light);
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+
+    .goal-text .goal-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    .goal-text p {
+      font-size: clamp(0.95rem, 1.1vw, 1.08rem);
+      line-height: 1.5;
+      color: rgba(247, 245, 240, 0.88);
+      max-width: 70ch;
+    }
+
+    .goal-text p strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+
     .ask-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4vw;
-      margin-top: 2vh;
+      margin-top: 1vh;
       flex: 1;
     }
 
@@ -741,17 +784,28 @@
         </div>
       </div>
 
-      <span class="pill dark">Wat we vragen</span>
+      <span class="pill dark">Het doel</span>
 
       <h1 class="headline">
-        Word jij onze<br />
-        <em>partner in dit verhaal?</em>
+        Help ons <em>€20k</em> op te halen.
       </h1>
+
+      <div class="goal-banner">
+        <div class="goal-amount">€20.000</div>
+        <div class="goal-text">
+          <div class="goal-label">Ons doel — alle beetjes helpen</div>
+          <p>
+            Met <strong>z'n drieën</strong> halen we dit op om alles
+            mogelijk te maken: reis, productie, tech &amp; de donatie aan
+            MIND. <strong>Elk bedrag telt</strong> — samen doen we het.
+          </p>
+        </div>
+      </div>
 
       <div class="ask-grid">
         <div class="ask-block">
-          <div class="label">Wat we vragen</div>
-          <h3>Een sponsorbijdrage om dit mogelijk te maken.</h3>
+          <div class="label">Waar gaat het naartoe</div>
+          <h3>Vier posten — transparant en simpel.</h3>
           <ul class="ask-list">
             <li><span class="check">·</span><span><strong>Reis &amp; verblijf</strong> voor 3 founders + crew</span></li>
             <li><span class="check">·</span><span><strong>Productie mini-docu</strong> (camera, edit, muziek)</span></li>
