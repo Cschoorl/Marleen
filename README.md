@@ -7,6 +7,32 @@ Een sponsor-pitch voor het Camino-project **Back to Being** (HTML-deck, meerdere
 
 Statische HTML/CSS/JS. Geen build, geen dependencies. Hostbaar op elke statische host.
 
+**Live (na hernoemen van de repo, zie onder):** `https://cschoorl.github.io/back-to-being/`
+
+---
+
+## GitHub: repo hernoemen (`Marleen` → `back-to-being`)
+
+De GitHub Pages-URL is `https://<gebruikersnaam>.github.io/<repositorynaam>/`. Om **Marleen** in de URL te vervangen door **back-to-being**:
+
+1. Ga naar **[Repository settings → General](https://github.com/Cschoorl/Marleen/settings)** van `Cschoorl/Marleen`.
+2. Veld **Repository name** → wijzig `Marleen` in **`back-to-being`** → klik **Rename**.
+
+**Lokaal daarna eenmalig** (HTTPS):
+
+```bash
+cd /Users/caesarschoorl/Marleen
+git remote set-url origin https://github.com/Cschoorl/back-to-being.git
+git remote -v
+git push origin main
+```
+
+(or via SSH:) `git@github.com:Cschoorl/back-to-being.git`
+
+Onder **Settings → Pages** hoef je meestal niets aan te passen; de site staat dan op **`https://cschoorl.github.io/back-to-being/`**. De oude `…/Marleen`-URL wordt door GitHub vaak nog een tijd doorgestuurd.
+
+Optioneel: hernoem ook je lokale map: `mv Marleen back-to-being` en open die map als project.
+
 ---
 
 ## Snel openen
