@@ -31,7 +31,7 @@ python3 -m http.server 4173
 ## Slide-structuur
 
 1. **Cover** — *The World as our Office.*
-2. **Wat is dit?** — Project in één zin + 4 facts (wie, wat, wanneer, voor wie)
+2. **Wat is dit?** — Project in één zin + context (intro lede)
 3. **Het plan** — *Lopen. Bouwen. Doneren.* in drie stappen
 4. **Waarom** — *Tech moet ons menselijker maken. Niet andersom.*
 5. **Het doel** — €20.000 ophalen + breakdown waar het naartoe gaat

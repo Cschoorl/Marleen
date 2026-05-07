@@ -276,49 +276,6 @@
     .slide.dark .row .row-detail { color: rgba(247, 245, 240, 0.7); }
     .slide.dark .row-tag { border-color: rgba(168, 201, 140, 0.5); color: var(--green-light); }
 
-    /* ---------- Slide 2: facts row (clean) ---------- */
-    .facts-clean {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      margin-top: auto;
-      border-top: 1px solid var(--line);
-      padding-top: 2rem;
-    }
-
-    .fact-clean {
-      padding: 0 1.5rem 0 0;
-      border-right: 1px solid var(--line);
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .fact-clean:last-child { border-right: none; }
-    .fact-clean:not(:first-child) { padding-left: 1.5rem; }
-
-    .fact-clean .label {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--green);
-      font-weight: 500;
-    }
-
-    .fact-clean .value {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(1.4rem, 1.85vw, 1.85rem);
-      color: var(--ink);
-      line-height: 1.15;
-    }
-
-    .fact-clean .note {
-      font-size: 0.85rem;
-      color: var(--ink-soft);
-      line-height: 1.45;
-    }
-
     /* ---------- Slide 4: vision bullets (clean) ---------- */
     .vision-list {
       list-style: none;
@@ -616,7 +573,6 @@
     }
 
     @media (max-width: 900px) {
-      .facts-clean { grid-template-columns: 1fr 1fr; }
       .row { grid-template-columns: 40px 1fr; }
       .row .row-detail { grid-column: 2; text-align: left; }
       .goal-hero-clean { grid-template-columns: 1fr; gap: 1rem; }
@@ -684,29 +640,6 @@
         Camino van Tui naar Santiago. Onderweg bouwen we live een
         AI-tool — die we daarna gratis weggeven aan stichting MIND.
       </p>
-
-      <div class="facts-clean">
-        <div class="fact-clean">
-          <span class="label">Wie</span>
-          <span class="value">3 AI-founders</span>
-          <span class="note">Team Back to Being — Amsterdam.</span>
-        </div>
-        <div class="fact-clean">
-          <span class="label">Wat</span>
-          <span class="value">115 km lopen</span>
-          <span class="note">Tui → Santiago.</span>
-        </div>
-        <div class="fact-clean">
-          <span class="label">Wanneer</span>
-          <span class="value">Zomer 2026</span>
-          <span class="note">Zes dagen, één rugzak.</span>
-        </div>
-        <div class="fact-clean">
-          <span class="label">Voor wie</span>
-          <span class="value">Stichting MIND</span>
-          <span class="note">Voor mentale gezondheid.</span>
-        </div>
-      </div>
     </section>
 
     <!-- ============ SLIDE 3: HET PLAN ============ -->
