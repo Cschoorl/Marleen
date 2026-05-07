@@ -419,7 +419,7 @@
       gap: 3rem;
       align-items: center;
       padding-top: 3vh;
-      border-top: 1px solid var(--line-dark);
+      border-top: 1px solid var(--line);
     }
 
     .cta-text {
@@ -428,19 +428,24 @@
       font-weight: 300;
       font-size: clamp(1.15rem, 1.45vw, 1.45rem);
       line-height: 1.45;
-      color: rgba(247, 245, 240, 0.88);
+      color: var(--ink);
       max-width: 46ch;
     }
 
     .contact-line {
       font-size: 0.85rem;
-      color: rgba(247, 245, 240, 0.55);
+      color: var(--ink-soft);
       letter-spacing: 0.02em;
       margin-top: 0.7rem;
     }
 
-    .contact-line a { color: var(--green-light); text-decoration: none; }
+    .contact-line a { color: var(--green); text-decoration: none; }
     .contact-line a:hover { text-decoration: underline; }
+
+    .slide.dark .cta-block { border-top-color: var(--line-dark); }
+    .slide.dark .cta-text { color: rgba(247, 245, 240, 0.88); }
+    .slide.dark .contact-line { color: rgba(247, 245, 240, 0.55); }
+    .slide.dark .contact-line a { color: var(--green-light); }
 
     .cta-button {
       display: inline-flex;
@@ -468,10 +473,73 @@
       font-style: italic;
       font-weight: 300;
       font-size: 0.85rem;
-      color: rgba(247, 245, 240, 0.55);
+      color: var(--ink-soft);
       margin-top: 0.8rem;
       text-align: right;
     }
+
+    .slide.dark .signature { color: rgba(247, 245, 240, 0.55); }
+
+    /* ---------- Slide 7: CLOSER ---------- */
+    .slide.closer {
+      justify-content: space-between;
+    }
+
+    .closer-kicker {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.2rem, 1.6vw, 1.7rem);
+      color: var(--ink-soft);
+      margin: auto 0 1.5vh;
+      letter-spacing: -0.005em;
+    }
+
+    .closer-headline {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+      font-size: clamp(3.5rem, 10vw, 12rem);
+      line-height: 0.92;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+      margin-bottom: auto;
+    }
+
+    .closer-headline em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--green);
+    }
+
+    .closer-foot {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: end;
+      padding-top: 2.5vh;
+      border-top: 1px solid var(--line);
+    }
+
+    .closer-tagline {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+      color: var(--ink-soft);
+      max-width: 50ch;
+      line-height: 1.45;
+      margin-bottom: 0.4rem;
+    }
+
+    .closer-contact {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      margin-top: 0.7rem;
+    }
+
+    .closer-contact a { color: var(--green); text-decoration: none; }
+    .closer-contact a:hover { text-decoration: underline; }
 
     /* ---------- Navigation ---------- */
     .nav {
@@ -583,7 +651,7 @@
         </div>
         <div class="topbar-right">
           <span>Wat is dit?</span>
-          <span>02 / 06</span>
+          <span>02 / 07</span>
         </div>
       </div>
 
@@ -634,7 +702,7 @@
         </div>
         <div class="topbar-right">
           <span>Het plan</span>
-          <span>03 / 06</span>
+          <span>03 / 07</span>
         </div>
       </div>
 
@@ -676,7 +744,7 @@
         </div>
         <div class="topbar-right">
           <span>Waarom</span>
-          <span>04 / 06</span>
+          <span>04 / 07</span>
         </div>
       </div>
 
@@ -722,7 +790,7 @@
         </div>
         <div class="topbar-right">
           <span>Het doel</span>
-          <span>05 / 06</span>
+          <span>05 / 07</span>
         </div>
       </div>
 
@@ -772,8 +840,8 @@
       </div>
     </section>
 
-    <!-- ============ SLIDE 6: PARTNER WORDEN (dark) ============ -->
-    <section class="slide dark" data-index="5">
+    <!-- ============ SLIDE 6: PARTNER WORDEN ============ -->
+    <section class="slide" data-index="5">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
@@ -781,11 +849,11 @@
         </div>
         <div class="topbar-right">
           <span>Word partner</span>
-          <span>06 / 06</span>
+          <span>06 / 07</span>
         </div>
       </div>
 
-      <span class="pill dark">Wat krijg je terug</span>
+      <span class="pill">Wat krijg je terug</span>
 
       <h1 class="headline">
         Word jij onze<br />
@@ -827,6 +895,46 @@
             of zien je in Amsterdam.
           </p>
           <p class="contact-line">
+            Caesar Schoorl — <a href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20sponsoring">Caesar.schoorl@gmail.com</a>
+          </p>
+        </div>
+        <div>
+          <a class="cta-button" href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20sponsoring">
+            Plan een koffie <span class="arrow">→</span>
+          </a>
+          <div class="signature">— Caesar &amp; team</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SLIDE 7: CLOSER ============ -->
+    <section class="slide closer" data-index="6">
+      <div class="topbar">
+        <div class="logo">
+          <span class="logo-mark">B</span>
+          Back to Being
+        </div>
+        <div class="topbar-right">
+          <span>Eén laatste ding</span>
+          <span>07 / 07</span>
+        </div>
+      </div>
+
+      <p class="closer-kicker">The world is our office.</p>
+
+      <h1 class="closer-headline">
+        Loop je<br />
+        <em>mee?</em>
+      </h1>
+
+      <div class="closer-foot">
+        <div>
+          <p class="closer-tagline">
+            We zoeken partners die dit verhaal mee willen schrijven.
+            Geen logo op een shirt — een plek in een avontuur dat
+            blijft hangen.
+          </p>
+          <p class="closer-contact">
             Caesar Schoorl — <a href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%20—%20sponsoring">Caesar.schoorl@gmail.com</a>
           </p>
         </div>
