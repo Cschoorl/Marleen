@@ -7,6 +7,24 @@ Een sponsor-pitch voor het Camino-project **Back to Being** (HTML-deck, meerdere
 
 Statische HTML/CSS/JS. Geen build, geen dependencies. Hostbaar op elke statische host.
 
+## Twee versies
+
+| Bestand | Wanneer gebruiken |
+|---|---|
+| `index.html` | Mét bedragen. Slide 5 toont budget per post + live progressbar (`SECURED_AMOUNT` aanpassen vóór de pitch). Slide 6 toont tier-prijzen. |
+| `zonder-bedragen.html` | Zónder bedragen. Voor verkennende gesprekken waar je geen prijs-anker wilt zetten. Slide 5 toont alleen kostencategorieën, slide 6 toont tiers als scope-niveaus (Volledig / Verbonden / In natura). |
+
+### Live progressbar bijwerken (mét-bedragen versie)
+
+In `index.html`, zoek de twee constanten in het `<script>` blok:
+
+```js
+const SECURED_AMOUNT = 0;     // EUR reeds toegezegd
+const TARGET_AMOUNT  = 20000; // EUR doel
+```
+
+Pas `SECURED_AMOUNT` aan voor elke pitch. De progressbar en het "X% reeds toegezegd"-label updaten automatisch.
+
 **Live (na hernoemen van de repo, zie onder):** `https://cschoorl.github.io/back-to-being/`
 
 ---
@@ -61,8 +79,9 @@ python3 -m http.server 4173
 3. **Het plan** (*Lopen. Bouwen. Doneren*) in drie stappen
 4. **Waarom** (filosofie: kantoor naar buiten)
 5. **Het doel** €20.000 ophalen + waar het naartoe gaat
-6. **Word partner** wat je terugkrijgt + CTA
-7. **Contact** Laten we koffie drinken (mail + optioneel telefoon)
+6. **Sponsorpakketten** drie tiers: Hoofdsponsor (€10k) / Co-sponsor (€3.5k) / Supporter (in natura). Geen limiet op aantal partners.
+7. **Word partner** wat je terugkrijgt + CTA
+8. **Contact** Laten we koffie drinken (mail + optioneel telefoon)
 
 ## Exporteren naar PDF
 
@@ -151,4 +170,4 @@ Pure HTML + CSS + vanilla JS. Geen build step, geen dependencies, geen tracking.
 
 Caesar.schoorl@gmail.com
 
-Telefoon op slide 7 wordt uit het script gevuld (`CONTACT_PHONE_*` onderaan `index.html`). Nu: +31 6 83032377.
+Telefoon op slide 8 wordt uit het script gevuld (`CONTACT_PHONE_*` onderaan `index.html`). Nu: +31 6 83032377.
