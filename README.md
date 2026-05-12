@@ -1,178 +1,122 @@
-# Back to Being: Sponsorvoorstel
+# Back to Being: Sponsordeck
 
-Een sponsor-pitch voor het Camino-project **Back to Being** (HTML-deck, meerdere slides).
+Statische HTML-slides voor het Camino-project **Back to Being** — sponsorpitch, geen build, geen dependencies.
 
-> **The World as our Office.**
-> Drie AI-founders. 115 km. Tui naar Santiago. Een AI-tool voor stichting MIND.
+> **The World as our Office.**  
+> Drie **AI-nerds** (ook founders) uit Amsterdam. 115 km. Tui naar Santiago. Live bouwen aan een AI-tool voor **stichting MIND**.
 
-Statische HTML/CSS/JS. Geen build, geen dependencies. Hostbaar op elke statische host.
+---
 
-## Drie bestanden
+## Live site (GitHub Pages)
 
-| Bestand | Wanneer gebruiken |
+**Standaard-URL van de repo** opent nu automatisch het **sponsordeck met bedragen**:
+
+| Wat je opent | URL (vul je GitHub-gebruikersnaam in) |
 |---|---|
-| `index.html` | Origineel deck (7 slides). Behouden voor referentie. |
-| `met-bedragen.html` | **Mét bedragen.** 8 slides incl. sponsortiers + budget per post + live progressbar (`SECURED_AMOUNT` aanpassen vóór de pitch). Slide 6 toont tier-prijzen. |
-| `zonder-bedragen.html` | **Zónder bedragen.** Voor verkennende gesprekken waar je geen prijs-anker wilt zetten. Slide 5 toont alleen kostencategorieën, slide 6 toont tiers als scope-niveaus (Volledig / Verbonden / In natura). |
+| **Startpagina → sponsordeck** | `https://<username>.github.io/Back-to-Being/` |
+| Expliciet met bedragen | `https://<username>.github.io/Back-to-Being/met-bedragen.html` |
+| Zonder euro’s op het scherm | `https://<username>.github.io/Back-to-Being/zonder-bedragen.html` |
+| Kort 7-slide deck | `https://<username>.github.io/Back-to-Being/index-7-slides.html` |
 
-### Live progressbar bijwerken (mét-bedragen versie)
+Voorbeeld (repo staat onder **Cschoorl**):  
+`https://cschoorl.github.io/Back-to-Being/` → redirect naar `met-bedragen.html`.
 
-In `met-bedragen.html`, zoek de twee constanten in het `<script>` blok:
+### Ik zie oude tekst na een push
+
+1. **Hard refresh:** macOS `⌘ + Shift + R`, Windows `Ctrl + Shift + R`.  
+2. **Privévenster** of andere browser.  
+3. **Cache-bust:** voeg tijdelijk `?v=2` toe aan de URL, bijv. `…/met-bedragen.html?v=2`.  
+4. Controleer **GitHub → Settings → Pages**: source = branch **`main`**, map **`/` (root)**.  
+5. Wacht 1–2 minuten na een push; daarna zou de nieuwe HTML live moeten staan.
+
+---
+
+## Welk bestand?
+
+| Bestand | Gebruik |
+|---|---|
+| `index.html` | **Doorverwijzing** naar `met-bedragen.html` (zodat de “gewone” Pages-link meteen het sponsordeck toont). |
+| `met-bedragen.html` | **Hoofd-sponsordeck:** 8 slides, €30k-doel, budget per post, sponsortiers, live progressbar. |
+| `zonder-bedragen.html` | Zelfde verhaal, **zonder** eurobedragen op de slides (verkennende gesprekken). |
+| `index-7-slides.html` | Korte **7-slide** variant (geen aparte sponsortiers-slide). |
+
+### Progressbar vóór een pitch (`met-bedragen.html`)
+
+Onderaan het `<script>`-blok:
 
 ```js
 const SECURED_AMOUNT = 0;     // EUR reeds toegezegd
-const TARGET_AMOUNT  = 20000; // EUR doel
+const TARGET_AMOUNT  = 30000; // EUR doel
 ```
 
-Pas `SECURED_AMOUNT` aan voor elke pitch. De progressbar en het "X% reeds toegezegd"-label updaten automatisch.
-
-**Live (na hernoemen van de repo, zie onder):** `https://cschoorl.github.io/back-to-being/`
+`SECURED_AMOUNT` per gesprek aanpassen; balk en percentage volgen automatisch.
 
 ---
 
-## GitHub: repo hernoemen (`Marleen` → `back-to-being`)
-
-De GitHub Pages-URL is `https://<gebruikersnaam>.github.io/<repositorynaam>/`. Om **Marleen** in de URL te vervangen door **back-to-being**:
-
-1. Ga naar **[Repository settings → General](https://github.com/Cschoorl/Marleen/settings)** van `Cschoorl/Marleen`.
-2. Veld **Repository name** → wijzig `Marleen` in **`back-to-being`** → klik **Rename**.
-
-**Lokaal daarna eenmalig** (HTTPS):
-
-```bash
-cd /Users/caesarschoorl/Marleen
-git remote set-url origin https://github.com/Cschoorl/back-to-being.git
-git remote -v
-git push origin main
-```
-
-(or via SSH:) `git@github.com:Cschoorl/back-to-being.git`
-
-Onder **Settings → Pages** hoef je meestal niets aan te passen; de site staat dan op **`https://cschoorl.github.io/back-to-being/`**. De oude `…/Marleen`-URL wordt door GitHub vaak nog een tijd doorgestuurd.
-
-Optioneel: hernoem ook je lokale map: `mv Marleen back-to-being` en open die map als project.
-
----
-
-## Snel openen
-
-Dubbelklik `index.html`, of via een lokale server:
+## Snel lokaal openen
 
 ```bash
 python3 -m http.server 4173
-# http://localhost:4173
+# http://localhost:4173/met-bedragen.html
 ```
 
-## Navigeren
+Of dubbelklik een `.html`-bestand in de browser.
+
+## Navigatie (in elk deck)
 
 | Toets | Actie |
 |---|---|
-| Pijl rechts / Space | Volgende slide |
+| Pijl rechts / spatie | Volgende slide |
 | Pijl links | Vorige slide |
 | Home / End | Eerste / laatste slide |
-| Klik op dot | Spring naar slide |
+| Dots onderaan | Naar slide springen |
 | Swipe (mobiel) | Vorige / volgende |
 
-## Slide-structuur (nieuwe versies — 8 slides)
+## Slide-structuur (8 slides — `met-bedragen` / `zonder-bedragen`)
 
-1. **Cover** (*The World as our Office*)
-2. **Wat is dit?** Project in één zin + intro (MIND akkoord, scope samen bepaald)
-3. **Het plan** (*Lopen. Bouwen. Overdragen.*) in drie stappen
-4. **Waarom** (filosofie: kantoor naar buiten)
-5. **Het doel** projectfinanciering + budget per post (mét-bedragen) of kostencategorieën (zonder-bedragen)
-6. **Sponsorpakketten** drie tiers: Hoofdsponsor / Co-sponsor / Supporter (in natura). Geen limiet op aantal partners.
-7. **Word partner** wat je terugkrijgt + CTA
-8. **Contact** Laten we koffie drinken (mail + optioneel telefoon)
-
-Het originele `index.html` heeft 7 slides (geen sponsortiers slide).
-
-## Exporteren naar PDF
-
-In Chrome of Safari:
-
-1. Open `index.html`
-2. `⌘ + P` (Print)
-3. Bestemming: **Opslaan als PDF**
-4. Oriëntatie: **Liggend**
-5. Marges: **Geen**
-6. Achtergrondafbeeldingen: **Aan**
-
-De print-styling zorgt dat elke slide op zijn eigen pagina komt zonder navigatiebalk.
+1. Cover — *The World as our Office*  
+2. Wat is dit? — intro + MIND  
+3. Het plan — Lopen · Bouwen · Overdragen  
+4. Waarom — filosofie  
+5. Het doel — budget (mét) of pijlers (zonder)  
+6. Sponsorpakketten  
+7. Word partner — wat je terugkrijgt  
+8. Contact  
 
 ---
 
-## Bestanden
+## PDF exporteren
 
+1. Open `met-bedragen.html` (of `index-7-slides.html`).  
+2. `⌘ + P` / `Ctrl + P` → **Opslaan als PDF**  
+3. Oriëntatie **Liggend**, marges **Geen**, achtergrond **Aan** (indien gevraagd).
+
+---
+
+## Repo & remote
+
+De remote kan na een GitHub-rename naar bv. `https://github.com/Cschoorl/Back-to-Being.git` wijzen. Lokaal controleren:
+
+```bash
+git remote -v
 ```
-.
-├── index.html              # Origineel deck (7 slides)
-├── met-bedragen.html       # Nieuw — 8 slides, mét bedragen + progressbar
-├── zonder-bedragen.html    # Nieuw — 8 slides, zonder bedragen
-├── README.md               # Dit bestand
-└── .gitignore
-```
+
+---
 
 ## Aanpassen
 
-- **Inhoud / copy:** alles in de HTML-bestanden tussen de `<section class="slide …">` tags
-- **Kleuren:** bovenin het `<style>` blok onder `:root` (o.a. `--green`, `--bg`, `--bg-dark`)
-- **Typografie:** [Fraunces](https://fonts.google.com/specimen/Fraunces) voor koppen, [Inter](https://fonts.google.com/specimen/Inter) voor body (Google Fonts)
-- **Stijl-inspiratie:** [House of Founders](https://houseoffounders.com): warme grijze achtergrond, serif met groen accent, pill tags
-
----
-
-## Naar Git pushen
-
-Eerste keer setup vanuit deze map:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: Back to Being sponsor deck"
-git branch -M main
-```
-
-### Optie A: GitHub via `gh` CLI
-
-```bash
-gh repo create back-to-being-deck --public --source=. --remote=origin --push
-```
-
-### Optie B: Handmatig (na repo aanmaken op GitHub/GitLab)
-
-```bash
-git remote add origin git@github.com:<jouw-username>/back-to-being-deck.git
-git push -u origin main
-```
-
----
-
-## Live hosten (optioneel)
-
-Omdat het pure statische HTML is, werkt elke statische host out-of-the-box:
-
-### GitHub Pages
-1. Repo → **Settings → Pages**
-2. Source: `main` branch, `/` (root)
-3. Klaar. URL wordt: `https://<username>.github.io/<repo>/`
-
-### Vercel / Netlify
-- Sleep de map naar [vercel.com/new](https://vercel.com/new) of [app.netlify.com/drop](https://app.netlify.com/drop). Deployt direct.
-- Geen configuratie nodig.
-
-### Cloudflare Pages
-```bash
-npx wrangler pages deploy . --project-name back-to-being-deck
-```
+- **Copy / slides:** `<section class="slide …">` in de betreffende `.html`.  
+- **Kleuren:** `:root` in het `<style>`-blok.  
+- **Fonts:** [Fraunces](https://fonts.google.com/specimen/Fraunces), [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts).
 
 ---
 
 ## Tech
 
-Pure HTML + CSS + vanilla JS. Geen build step, geen dependencies, geen tracking. Werkt offline na de eerste page load (Google Fonts uitgezonderd).
+Pure HTML, CSS en vanilla JS. Geen tracking. Na eerste load grotendeels offline (fonts daargelaten).
 
 ## Contact
 
-Caesar.schoorl@gmail.com
+Caesar.schoorl@gmail.com  
 
-Telefoon op slide 8 wordt uit het script gevuld (`CONTACT_PHONE_*` onderaan `index.html`). Nu: +31 6 83032377.
+Telefoon op de contactslide: scriptconstanten `CONTACT_PHONE_*` onderaan het HTML-bestand (nu +31 6 83032377).
