@@ -321,6 +321,64 @@
       max-width: 70ch;
     }
 
+    /* ---------- Verhaal in kader (filosofie / doel) ---------- */
+    .story-frame {
+      margin-top: auto;
+      align-self: stretch;
+      max-width: 58ch;
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      padding: clamp(1.35rem, 2.8vw, 2.15rem) clamp(1.5rem, 3vw, 2.5rem);
+      background: rgba(247, 245, 240, 0.55);
+      box-shadow: 0 1px 0 rgba(26, 26, 26, 0.04);
+    }
+
+    .story-frame p {
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+      line-height: 1.58;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .story-frame p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-frame strong {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--green);
+    }
+
+    .goal-story-wrap {
+      margin-top: 0.5rem;
+      margin-bottom: 1.5vh;
+    }
+
+    .goal-inset-note {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.78rem, 0.88vw, 0.88rem);
+      color: var(--ink-soft);
+      line-height: 1.55;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .goal-inset-note--flat {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0.5rem;
+      font-style: normal;
+    }
+
+    .slide.cover .topbar {
+      justify-content: flex-start;
+    }
+
     /* ---------- Slide 5: goal (clean, no box) ---------- */
     .goal-hero-clean {
       display: grid;
@@ -868,10 +926,6 @@
           <span class="logo-mark">B</span>
           Back to Being
         </div>
-        <div class="topbar-right">
-          <span>Sponsordeck</span>
-          <span>Zomer 2026</span>
-        </div>
       </div>
 
       <h1 class="cover-headline">
@@ -883,7 +937,7 @@
         <p class="cover-tagline">
           Drie AI-nerds maken van de Camino hun kantoor: 115 km,
           live bouwen in beeld, daarna een echte overdracht aan MIND.
-          Sponsoring zet dit verhaal op de kaart — inhoudelijk én zichtbaar.
+          Sponsoring zet dit verhaal op de kaart, inhoudelijk én zichtbaar.
         </p>
         <div class="cover-foot-meta">
           Tui naar Santiago<br />
@@ -899,13 +953,7 @@
           <span class="logo-mark">B</span>
           Back to Being
         </div>
-        <div class="topbar-right">
-          <span>Wat is dit?</span>
-          <span>02 / 08</span>
-        </div>
       </div>
-
-      <span class="pill">Wat is dit?</span>
 
       <h1 class="headline">
         Eén pelgrimstocht.<br />
@@ -914,18 +962,15 @@
       </h1>
 
       <p class="lede">
-        Wij zijn drie AI-nerds uit Amsterdam — ook founders, maar vooral
-        mensen die liever bouwen dan slides maken. Deze zomer is de
-        laatste etappe van de Camino — Tui naar Santiago, zes dagen —
-        onze werkplek: geen pitchdeck in een boardroom, maar echte
-        kilometers terwijl we zichtbaar bouwen aan één concrete tool voor
-        mentale gezondheid. Die tool dragen we daarna over aan
-        stichting MIND; scope en inzet bepalen we samen met hen.
-        Sponsors maken die reis, de productie en de overdracht mogelijk.
+        Wij zijn drie AI-nerds uit Amsterdam, ook founders, maar vooral
+        mensen die liever bouwen dan slides maken. Deze zomer lopen we de
+        Camino van Tui naar Santiago en bouwen onderweg live aan één
+        AI-tool voor mentale gezondheid. Daarna dragen we die over aan
+        stichting MIND. Sponsors maken reis, productie en overdracht mogelijk.
       </p>
     </section>
 
-    <!-- ============ SLIDE 3: HET PLAN ============ -->
+    <!-- ============ SLIDE 3: WAAROM (verhaal) ============ -->
     <section class="slide" data-index="2">
       <div class="topbar">
         <div class="logo">
@@ -933,52 +978,8 @@
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>Het plan</span>
-          <span>03 / 08</span>
-        </div>
-      </div>
-
-      <span class="pill">Het plan</span>
-
-      <h1 class="headline">
-        Lopen. Bouwen. <em>Overdragen.</em>
-      </h1>
-
-      <p class="lede">
-        Drie stappen, één verhaallijn: het lichaam geeft ritme, het
-        landschap geeft ruimte, de camera maakt het eerlijk. Geen
-        theater — wel zichtbaar vakmanschap.
-      </p>
-
-      <div class="rows">
-        <div class="row">
-          <span class="row-num">01</span>
-          <span class="row-title">We lopen.</span>
-          <span class="row-detail">115 km in 6 dagen, Tui naar Santiago — drie rugzakken, één tempo.</span>
-        </div>
-        <div class="row">
-          <span class="row-num">02</span>
-          <span class="row-title">We bouwen onderweg.</span>
-          <span class="row-detail">Live aan de tool: spraak, smart glasses, crew die meerekent — iedereen ziet hoe software ontstaat buiten het kantoor.</span>
-        </div>
-        <div class="row">
-          <span class="row-num">03</span>
-          <span class="row-title">We dragen het over.</span>
-          <span class="row-detail">De tool gaat naar MIND; de mini-docu blijft het verhaal vertellen — voor het publiek, voor jullie merk, voor de sector.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SLIDE 4: WAAROM ============ -->
-    <section class="slide" data-index="3">
-      <div class="topbar">
-        <div class="logo">
-          <span class="logo-mark">B</span>
-          Back to Being
-        </div>
-        <div class="topbar-right">
           <span>Waarom</span>
-          <span>04 / 08</span>
+          <span>03 / 07</span>
         </div>
       </div>
 
@@ -989,34 +990,29 @@
         <em>naar buiten.</em>
       </h1>
 
-      <p class="lede">
-        Niet bouwen vanachter een bureau, maar lopend. Reflecterend.
-        In beweging. We laten zien dat tech ons juist menselijker
-        kan maken, als je 'm op de goede manier inzet.
-      </p>
-
-      <ul class="vision-list">
-        <li>
-          <span class="num">01</span>
-          <span class="text">De werkweek voelt sneller digitaal dan menselijk — terwijl AI juist ruimte zou moeten geven voor wie we zijn.</span>
-        </li>
-        <li>
-          <span class="num">02</span>
-          <span class="text">Mentale gezondheid raakt iedereen; we laten zien dat tech daar nuchter én warm bij kan aansluiten.</span>
-        </li>
-        <li>
-          <span class="num">03</span>
-          <span class="text">Beweging schuift ruis opzij: lopen is scherp denken — en scherp denken is bouwen.</span>
-        </li>
-        <li>
-          <span class="num">04</span>
-          <span class="text">De mini-docu vangt de spanning tussen zweet en software — voor MIND, voor het publiek, en voor partners die meegaan.</span>
-        </li>
-      </ul>
+      <div class="story-frame">
+        <p>
+          Niet bouwen vanachter een bureau, maar lopend, reflecterend,
+          in beweging. We laten zien dat tech ons juist <strong>menselijker</strong>
+          kan maken, als je hem op de goede manier inzet.
+        </p>
+        <p>
+          De werkweek voelt voor veel mensen sneller digitaal dan menselijk,
+          terwijl AI juist ruimte zou moeten geven voor wie we zijn. Mentale
+          gezondheid raakt iedereen; wij willen laten zien dat je technologie
+          daar nuchter én warm bij kunt laten aansluiten.
+        </p>
+        <p>
+          Voor ons schuift beweging ruis opzij: lopen is scherp denken,
+          en scherp denken is bouwen. Een mini-docu vangt daarna de spanning
+          tussen zweet en software, voor MIND, voor het publiek, en voor
+          partners die het aandurven om mee te financieren.
+        </p>
+      </div>
     </section>
 
-    <!-- ============ SLIDE 5: HET DOEL ============ -->
-    <section class="slide" data-index="4">
+    <!-- ============ SLIDE 4: HET DOEL ============ -->
+    <section class="slide" data-index="3">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
@@ -1024,14 +1020,14 @@
         </div>
         <div class="topbar-right">
           <span>Het doel</span>
-          <span>05 / 08</span>
+          <span>04 / 07</span>
         </div>
       </div>
 
       <span class="pill">Het doel</span>
 
       <h1 class="headline">
-        <em>€30.000</em> om het verhaal goed te doen.
+        Help ons <em>€30.000</em> op te halen.
       </h1>
 
       <div class="goal-hero-clean">
@@ -1039,9 +1035,35 @@
         <div class="goal-side-clean">
           <div class="label">Projectfinanciering</div>
           <p>
-            Geen donatiepot — <strong>projectfinanciering</strong> met zichtbare partnerwaarde. Dit bedrag dekt docu-kwaliteit die het terrein eer aandoet, robuuste tech (hardware + AI), veilig onderweg zijn met crew, en uitrusting die mee moet in beeld — alles gericht op bouw en overdracht aan MIND.
+            Dit is geen donatiepot: het is budget om het verhaal écht goed
+            te doen. <strong>Zo zetten we het in.</strong>
           </p>
         </div>
+      </div>
+
+      <div class="goal-story-wrap story-frame">
+        <p>
+          We gebruiken het voor de <strong>mini-docu</strong>, zodat het pad,
+          het bouwen en de overdracht aan MIND ook na de hike blijven leven
+          op beeld.
+        </p>
+        <p>
+          We gebruiken het voor <strong>tech en AI</strong>: hardware,
+          credits en software zodat we onderweg betrouwbaar kunnen werken
+          met spraak, smart glasses en audio die mee kan in het landschap.
+        </p>
+        <p>
+          We gebruiken het voor <strong>reis en verblijf</strong>: zes dagen
+          voor drie AI-nerds plus crew, veilig en productief onderweg.
+        </p>
+        <p>
+          We gebruiken het voor <strong>kleding en uitrusting</strong> die
+          in beeld moet en mag: schoeisel, rugzakken, gear die het verhaal
+          eer aandoet.
+        </p>
+        <p class="goal-inset-note goal-inset-note--flat">
+          Indicatief verdeeld: docu <strong>± €11.500</strong> · tech <strong>± €7.500</strong> · reis <strong>± €7.500</strong> · gear <strong>± €3.500</strong>.
+        </p>
       </div>
 
       <div class="goal-progress" aria-label="Voortgang projectfinanciering">
@@ -1053,54 +1075,37 @@
           <span class="goal-progress-label">reeds toegezegd · 0%</span>
         </div>
       </div>
-
-      <div class="rows rows-tight">
-        <div class="row">
-          <span class="row-num">01</span>
-          <span class="row-title">Productie mini-docu</span>
-          <span class="row-detail"><strong>± €11.500</strong> &nbsp;&middot;&nbsp; Camera, edit, muziek, kleurcorrectie — verhaal dat blijft hangen.</span>
-        </div>
-        <div class="row">
-          <span class="row-num">02</span>
-          <span class="row-title">Tech &amp; AI</span>
-          <span class="row-detail"><strong>± €7.500</strong> &nbsp;&middot;&nbsp; Hardware, AI-credits, software, microfoons.</span>
-        </div>
-        <div class="row">
-          <span class="row-num">03</span>
-          <span class="row-title">Reis &amp; verblijf</span>
-          <span class="row-detail"><strong>± €7.500</strong> &nbsp;&middot;&nbsp; Drie AI-nerds + crew, 6 dagen on the road.</span>
-        </div>
-        <div class="row">
-          <span class="row-num">04</span>
-          <span class="row-title">Kleding &amp; uitrusting</span>
-          <span class="row-detail"><strong>± €3.500</strong> &nbsp;&middot;&nbsp; Schoeisel, rugzakken, gear, zichtbaar in beeld.</span>
-        </div>
-      </div>
     </section>
 
-    <!-- ============ SLIDE 6: SPONSORTIERS ============ -->
-    <section class="slide slide-tiers" data-index="5">
+    <!-- ============ SLIDE 5: PARTNER + SPONSORTIERS ============ -->
+    <section class="slide slide-tiers" data-index="4">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>Sponsorpakketten</span>
-          <span>06 / 08</span>
+          <span>Partnerschap</span>
+          <span>05 / 07</span>
         </div>
       </div>
 
-      <span class="pill">Sponsorpakketten</span>
+      <span class="pill">Partner worden</span>
 
       <h1 class="headline">
-        Drie manieren om <em>mee te lopen.</em>
+        Word jij onze<br />
+        <em>partner in dit verhaal?</em>
       </h1>
 
       <p class="lede">
-        Kies hoe dichtbij je aan het vuur wilt zitten — cash of in natura.
-        Samen vullen we €30.000; alles daar bovenop gaat rechtstreeks naar
-        scherpere afwerking en bredere distributie van het verhaal.
+        We hebben je nodig om dit waar te maken. Zonder partners blijft het
+        bij plannen op papier. Je naam of merk komt in de mini-docu op een
+        manier die bij het verhaal hoort, niet als los logo. We maken
+        content waarin zichtbaar wordt hoe jullie deze journey mogelijk
+        hebben gemaakt, klaar voor jullie kanalen. Daarnaast gaan we samen
+        het gesprek openen over wat jullie nog meer terug willen zien:
+        we denken graag mee over maatwerk waar dat logisch is. Hieronder
+        drie instappunten, in cash of in natura.
       </p>
 
       <div class="tiers">
@@ -1146,52 +1151,47 @@
       </div>
     </section>
 
-    <!-- ============ SLIDE 7: PARTNER WORDEN ============ -->
-    <section class="slide" data-index="6">
+    <!-- ============ SLIDE 6: VERVOLG ============ -->
+    <section class="slide" data-index="5">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
           Back to Being
         </div>
         <div class="topbar-right">
-          <span>Word partner</span>
-          <span>07 / 08</span>
+          <span>Vervolg</span>
+          <span>06 / 07</span>
         </div>
       </div>
 
-      <span class="pill">Wat krijg je terug</span>
+      <span class="pill">Praktisch</span>
 
       <h1 class="headline">
-        Word jij onze<br />
-        <em>partner in dit verhaal?</em>
+        Van intentie naar<br />
+        <em>concrete afspraken.</em>
       </h1>
 
       <p class="lede">
-        Je investeert niet in een eenmalig logo — je koopt een plek in
-        een verhaal dat we samen uitdragen. Vier concrete terugverdieners;
-        één daarvan is in de praktijk nergens anders te boeken.
+        We nemen een korte call om pakket, timing en content met elkaar te
+        verbinden. Geen eindeloze trajecten: we willen snel helderheid voor
+        jullie én voor ons team op het pad.
       </p>
 
       <div class="rows">
         <div class="row">
           <span class="row-num">01</span>
-          <span class="row-title">Het kantoor naar buiten voor jouw team <span class="row-tag">uniek</span></span>
-          <span class="row-detail">Walking workshop + AI session bij jullie. Wij brengen Back to Being naar je bedrijf.</span>
+          <span class="row-title">Het kantoor naar buiten <span class="row-tag">uniek</span></span>
+          <span class="row-detail">Walking workshop en AI-session bij jullie op locatie, als onderdeel van het partnership.</span>
         </div>
         <div class="row">
           <span class="row-num">02</span>
-          <span class="row-title">Mini-docu met merkvermelding</span>
-          <span class="row-detail">Distributie via TikTok, Instagram en YouTube. Prominent verbonden aan een verhaal dat blijft hangen.</span>
+          <span class="row-title">Earned media &amp; zichtbaarheid</span>
+          <span class="row-detail">We blijven het verhaal actief uitdragen; jullie merk reist mee waar dat past bij het narratief.</span>
         </div>
         <div class="row">
           <span class="row-num">03</span>
-          <span class="row-title">Earned media</span>
-          <span class="row-detail">We pitchen het verhaal actief richting podcasts, kranten en eigen netwerk. Jouw merk reist mee.</span>
-        </div>
-        <div class="row">
-          <span class="row-num">04</span>
-          <span class="row-title">Content voor jouw kanalen</span>
-          <span class="row-detail">Beelden, quotes en updates, klaar om te delen op je eigen socials.</span>
+          <span class="row-title">Debrief na de Camino</span>
+          <span class="row-detail">Een gezamenlijk moment om resultaat, docu en vervolg te delen met jullie stakeholders.</span>
         </div>
       </div>
 
@@ -1208,8 +1208,8 @@
       </div>
     </section>
 
-    <!-- ============ SLIDE 8: CLOSER ============ -->
-    <section class="slide closer" data-index="7">
+    <!-- ============ SLIDE 7: CLOSER ============ -->
+    <section class="slide closer" data-index="6">
       <div class="topbar">
         <div class="logo">
           <span class="logo-mark">B</span>
@@ -1217,14 +1217,14 @@
         </div>
         <div class="topbar-right">
           <span>Contact</span>
-          <span>08 / 08</span>
+          <span>07 / 07</span>
         </div>
       </div>
 
       <div class="closer-body">
         <h1 class="closer-title">Laten we koffie drinken.</h1>
         <p class="closer-sub">
-          Stuur dit deck intern rond, of plan direct <strong>10 minuten</strong> met ons — wat voor jou het snelst helderheid geeft.
+          Stuur dit deck intern rond, of plan direct <strong>10 minuten</strong> met ons, wat voor jou het snelst helderheid geeft.
         </p>
 
         <!-- Telefoon staat ingesteld onderaan het script (CONTACT_PHONE_*) -->
@@ -1246,7 +1246,7 @@
         </div>
 
         <p class="closer-signoff">
-          <strong>De wereld als ons kantoor</strong> — we horen graag of jullie met ons dit hoofdstuk willen schrijven. Zomer 2026.
+          <strong>De wereld als ons kantoor</strong>, we horen graag of jullie met ons dit hoofdstuk willen schrijven. Zomer 2026.
         </p>
       </div>
     </section>

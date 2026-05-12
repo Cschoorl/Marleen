@@ -16,7 +16,7 @@ Statische HTML-slides voor het Camino-project **Back to Being** — sponsorpitch
 | **Startpagina → sponsordeck** | `https://<username>.github.io/Back-to-Being/` |
 | Expliciet met bedragen | `https://<username>.github.io/Back-to-Being/met-bedragen.html` |
 | Zonder euro’s op het scherm | `https://<username>.github.io/Back-to-Being/zonder-bedragen.html` |
-| Kort 7-slide deck | `https://<username>.github.io/Back-to-Being/index-7-slides.html` |
+| Kort deck (zonder “Het plan”, 6 slides) | `https://<username>.github.io/Back-to-Being/index-7-slides.html` |
 
 Voorbeeld (repo staat onder **Cschoorl**):  
 `https://cschoorl.github.io/Back-to-Being/` → redirect naar `met-bedragen.html`.
@@ -36,9 +36,9 @@ Voorbeeld (repo staat onder **Cschoorl**):
 | Bestand | Gebruik |
 |---|---|
 | `index.html` | **Doorverwijzing** naar `met-bedragen.html` (zodat de “gewone” Pages-link meteen het sponsordeck toont). |
-| `met-bedragen.html` | **Hoofd-sponsordeck:** 8 slides, €30k-doel, budget per post, sponsortiers, live progressbar. |
-| `zonder-bedragen.html` | Zelfde verhaal, **zonder** eurobedragen op de slides (verkennende gesprekken). |
-| `index-7-slides.html` | Korte **7-slide** variant (geen aparte sponsortiers-slide). |
+| `met-bedragen.html` | **Hoofd-sponsordeck:** 7 slides, €30k-doel, verhaal in kaders, partner + sponsortiers, live progressbar. |
+| `zonder-bedragen.html` | Zelfde opbouw, **zonder** eurobedragen per post op het scherm (wel totaaldoel). |
+| `index-7-slides.html` | **Kort:** 6 slides, geen aparte sponsortiers-kolommen (wel partner-slide). |
 
 ### Progressbar vóór een pitch (`met-bedragen.html`)
 
@@ -72,17 +72,17 @@ Of dubbelklik een `.html`-bestand in de browser.
 | Dots onderaan | Naar slide springen |
 | Swipe (mobiel) | Vorige / volgende |
 
-## Slide-structuur (8 slides — `met-bedragen` / `zonder-bedragen`)
+## Slide-structuur (`met-bedragen` / `zonder-bedragen`, 7 slides)
 
-1. Cover — *The World as our Office*  
+1. Cover  
 2. Wat is dit? — intro + MIND  
-3. Het plan — Lopen · Bouwen · Overdragen  
-4. Waarom — filosofie  
-5. Het doel — budget (mét) of pijlers (zonder)  
-6. Sponsorpakketten  
-7. Word partner — wat je terugkrijgt  
-8. Contact  
+3. Waarom — filosofie als doorlopend verhaal (kader)  
+4. Het doel — “Help ons €30.000…”, verhaal waar het geld naartoe gaat + (mét) voortgangsbalk en indicatieve verdeling  
+5. Partner + sponsortiers — “Word jij onze partner…”, storytelling + drie pakketten  
+6. Vervolg — praktische vervolgstappen + CTA  
+7. Contact  
 
+**`index-7-slides.html` (6 slides):** geen slide “Het plan”; geen drie tier-kolommen; partner-slide met kernpunten; zelfde cover- en doelverhaal in verkorte vorm.
 ---
 
 ## PDF exporteren
