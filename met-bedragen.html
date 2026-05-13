@@ -536,6 +536,15 @@
       font-weight: 600;
     }
 
+    .slide-wat-doen .slide-wat-doen-cta {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: min(54ch, 92vw);
+      margin: clamp(2rem, 5vh, 3rem) auto 0;
+      align-self: center;
+    }
+
     /* Ondertitel bij vraag-koppen (door het deck) */
     .slide-q-sub {
       font-family: var(--font-sub);
@@ -1547,6 +1556,13 @@
           </p>
         </div>
       </div>
+
+      <div class="slide-wat-doen-cta">
+        <button type="button" class="cta-button" id="cta-wat-doen-next"
+          aria-label="Volgende slide">
+          Hoe gaan we dit doen <span class="arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
     </section>
 
     <!-- ============ SLIDE 3: WAAROM ============ -->
@@ -1921,6 +1937,15 @@
         nextContactBtn.addEventListener('click', function (ev) {
           ev.preventDefault();
           go(total - 1);
+        });
+      }
+
+      var watDoenNextBtn = document.getElementById('cta-wat-doen-next');
+      if (watDoenNextBtn) {
+        watDoenNextBtn.addEventListener('click', function () {
+          var sec = watDoenNextBtn.closest('.slide');
+          var idx = sec ? slides.indexOf(sec) : -1;
+          if (idx >= 0 && idx < total - 1) go(idx + 1);
         });
       }
 
