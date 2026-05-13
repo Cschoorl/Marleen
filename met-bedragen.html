@@ -408,28 +408,6 @@
       color: var(--tree);
     }
 
-    .goal-story-wrap {
-      margin-top: 0.5rem;
-      margin-bottom: 1.5vh;
-    }
-
-    .goal-inset-note {
-      font-family: var(--font-body);
-      font-size: clamp(0.78rem, 0.88vw, 0.88rem);
-      color: var(--ink-soft);
-      line-height: 1.55;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--line);
-    }
-
-    .goal-inset-note--flat {
-      border-top: none;
-      padding-top: 0;
-      margin-top: 0.5rem;
-      font-style: normal;
-    }
-
     .slide.cover .topbar {
       justify-content: flex-start;
     }
@@ -478,22 +456,26 @@
 
     /* ---------- Slide 2 & 3: gestapelde blokken, zelfde layout (geen kaders) ---------- */
     .slide.slide-wat-doen.slide--center,
-    .slide.slide-waarom.slide--center {
+    .slide.slide-waarom.slide--center,
+    .slide.slide-doel.slide--center {
       align-items: stretch;
     }
 
     .slide.slide-wat-doen,
-    .slide.slide-waarom {
+    .slide.slide-waarom,
+    .slide.slide-doel {
       padding: 8vh 5vw 11vh;
     }
 
     .slide-wat-doen.slide--center .topbar,
-    .slide-waarom.slide--center .topbar {
+    .slide-waarom.slide--center .topbar,
+    .slide-doel.slide--center .topbar {
       margin-bottom: clamp(3vh, 5vw, 5vh);
     }
 
     .slide-wat-doen.slide--center .headline,
-    .slide-waarom.slide--center .headline {
+    .slide-waarom.slide--center .headline,
+    .slide-doel.slide--center .headline {
       font-family: var(--font-sub);
       font-weight: 600;
       font-style: normal;
@@ -508,7 +490,8 @@
     }
 
     .slide-wat-doen .wat-doen-grid,
-    .slide-waarom .wat-doen-grid {
+    .slide-waarom .wat-doen-grid,
+    .slide-doel .wat-doen-grid {
       display: flex;
       flex-direction: column;
       align-items: stretch;
@@ -521,13 +504,15 @@
     }
 
     .slide-wat-doen .wat-doen-block,
-    .slide-waarom .wat-doen-block {
+    .slide-waarom .wat-doen-block,
+    .slide-doel .wat-doen-block {
       min-width: 0;
     }
 
     /* Zelfde familie als cover-tagline (pagina 1): Inter Tight */
     .slide-wat-doen .wat-doen-block p,
-    .slide-waarom .wat-doen-block p {
+    .slide-waarom .wat-doen-block p,
+    .slide-doel .wat-doen-block p {
       font-family: var(--font-sub);
       font-style: normal;
       font-weight: 400;
@@ -539,7 +524,8 @@
     }
 
     .slide-wat-doen .wat-doen-block p strong,
-    .slide-waarom .wat-doen-block p strong {
+    .slide-waarom .wat-doen-block p strong,
+    .slide-doel .wat-doen-block p strong {
       color: var(--tree);
       font-weight: 600;
     }
@@ -733,17 +719,6 @@
       }
     }
 
-    .slide-doel .headline {
-      font-family: var(--font-sub);
-      font-weight: 600;
-      font-style: normal;
-      max-width: min(52ch, 94vw);
-      font-size: clamp(1.65rem, 2.85vw, 2.65rem);
-      line-height: 1.14;
-      letter-spacing: -0.03em;
-      margin-bottom: clamp(1rem, 2vh, 1.5rem);
-    }
-
     .cta-actions {
       list-style: none;
       margin: 1rem 0 0;
@@ -913,39 +888,20 @@
       font-size: 0.88rem;
     }
 
-    /* ---------- Slide 4: €30k + verhaal (geen voortgangsbalk) ---------- */
-    .goal-hero-clean {
-      padding: 0.5vh 0 clamp(1.25rem, 2.5vh, 2rem);
-      margin-bottom: clamp(0.75rem, 2vh, 1.25rem);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .goal-amount-clean {
-      font-family: var(--font-head);
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(3.5rem, 7.5vw, 7.5rem);
-      color: var(--tree);
-      line-height: 0.9;
-      letter-spacing: -0.02em;
-    }
-
-    /* Slide 4 body: zelfde Inter Tight-helderheid als slide 2–3 */
-    .slide-doel .goal-story-wrap.story-frame p {
+    /* ---------- Slide 4: €30k (zelfde stack als slide 2–3) ---------- */
+    .slide-doel .doel-bedrag {
       font-family: var(--font-sub);
       font-style: normal;
-      font-weight: 400;
-      font-size: clamp(1.05rem, 1.42vw, 1.38rem);
-      letter-spacing: 0.01em;
-      line-height: 1.55;
-      color: var(--ink-soft);
-    }
-
-    .slide-doel .goal-story-wrap.story-frame strong {
-      font-family: inherit;
-      font-style: normal;
       font-weight: 600;
+      font-size: clamp(2.85rem, 6.5vw, 5.75rem);
       color: var(--tree);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      text-align: center;
+      align-self: center;
+      margin: 0 0 clamp(2rem, 4.5vh, 3rem);
+      width: 100%;
+      max-width: min(54ch, 92vw);
     }
 
     /* ---------- Sponsor tiers ---------- */
@@ -1541,7 +1497,7 @@
     </section>
 
     <!-- ============ SLIDE 4: WAT HEBBEN WE NODIG / €30K ============ -->
-    <section class="slide slide-doel" data-index="3">
+    <section class="slide slide--center slide-doel" data-index="3">
       <div class="topbar">
         <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
@@ -1555,18 +1511,23 @@
         Wat hebben we nodig om van de wereld ons kantoor te maken?
       </h1>
 
-      <div class="goal-hero-clean">
-        <div class="goal-amount-clean">€30.000</div>
-      </div>
+      <div class="doel-bedrag" lang="nl">€30.000</div>
 
-      <div class="goal-story-wrap story-frame">
-        <p>
-          Gear dat het pad aankan: goede schoenen, brillen, water en voeding voor lange dagen.
-          ’s Nachts een slaapplek die meegaat. De reiskosten en de tocht zelf horen erbij. Dit is
-          het echte werk onderweg. Om onderweg te bouwen hebben we stabiele verbinding nodig;
-          een eigen wifi-kastje houdt het kantoor bruikbaar waar het netwerk wisselt. Tot slot
-          apparatuur voor een mini-docu die dit verhaal straks helder en menselijk kan vertellen.
-        </p>
+      <div class="wat-doen-grid">
+        <div class="wat-doen-block">
+          <p>
+            Gear dat het pad aankan: goede schoenen, brillen, water en voeding voor lange dagen.
+            ’s Nachts een slaapplek die meegaat. De reiskosten en de tocht zelf horen erbij. Dit is
+            het echte werk onderweg.
+          </p>
+        </div>
+        <div class="wat-doen-block">
+          <p>
+            Om onderweg te bouwen hebben we stabiele verbinding nodig; een eigen wifi-kastje houdt
+            het kantoor bruikbaar waar het netwerk wisselt. Tot slot apparatuur voor een mini-docu
+            die dit verhaal straks helder en menselijk kan vertellen.
+          </p>
+        </div>
       </div>
     </section>
 
