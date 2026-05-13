@@ -486,11 +486,7 @@
     }
 
     .slide-wat-doen.slide--center .topbar {
-      margin-bottom: 4.5vh;
-    }
-
-    .slide-wat-doen.slide--center .pill {
-      margin-bottom: 2.25rem;
+      margin-bottom: clamp(3vh, 5vw, 5vh);
     }
 
     .slide-wat-doen.slide--center .headline {
@@ -508,17 +504,15 @@
     }
 
     .slide-wat-doen .wat-doen-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(2rem, 4vw, 3.25rem);
-      column-gap: clamp(2.75rem, 7vw, 6rem);
-      row-gap: clamp(2rem, 3.5vh, 2.75rem);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: clamp(2.75rem, 6vh, 4.5rem);
       width: 100%;
-      max-width: none;
-      margin: 0;
-      align-self: stretch;
+      max-width: min(54ch, 92vw);
+      margin: 0 auto;
+      align-self: center;
       flex: 1;
-      align-items: start;
     }
 
     .slide-wat-doen .wat-doen-block {
@@ -540,13 +534,6 @@
     .slide-wat-doen .wat-doen-block p strong {
       color: var(--tree);
       font-weight: 600;
-    }
-
-    @media (max-width: 900px) {
-      .slide-wat-doen .wat-doen-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
     }
 
     /* Budget-overzicht (vervangt vaste sponsortiers) */
@@ -1385,12 +1372,9 @@
           <span class="logo-mark" aria-hidden="true"></span>
         </div>
         <div class="topbar-right">
-          <span>Het project</span>
           <span>02 / 07</span>
         </div>
       </div>
-
-      <span class="pill">Het project</span>
 
       <h1 class="headline">
         Wat gaan we doen?
