@@ -864,67 +864,32 @@
       color: var(--creek);
     }
 
-    .closer-team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem 1.25rem;
-      width: 100%;
-      margin-bottom: 1.75rem;
-    }
-
-    .closer-team-card {
-      border: 1.5px solid var(--line);
-      border-radius: 12px;
-      padding: 1rem 1.15rem;
-      background: rgba(167, 189, 213, 0.12);
+    .closer-contact-block {
       display: flex;
       flex-direction: column;
-      gap: 0.45rem;
-      min-height: 100%;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0;
     }
 
-    .closer-team-card h2 {
+    .closer-contact-block a {
       font-family: var(--font-sub);
-      font-size: 1.05rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      margin: 0;
-      text-transform: none;
-    }
-
-    .closer-team-meta {
-      font-family: var(--font-body);
-      font-size: clamp(0.82rem, 0.92vw, 0.88rem);
-      line-height: 1.4;
-      color: var(--ink-soft);
-      margin: 0;
-    }
-
-    .closer-team-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      margin-top: 0.25rem;
-    }
-
-    .closer-team-links a {
-      font-family: var(--font-sub);
-      font-size: 0.82rem;
-      font-weight: 600;
+      font-weight: 500;
+      font-size: clamp(1.08rem, 1.55vw, 1.42rem);
+      letter-spacing: 0.01em;
       color: var(--creek);
       text-decoration: none;
+      word-break: break-word;
+      line-height: 1.35;
     }
 
-    .closer-team-links a:hover {
+    .closer-contact-block a:hover {
       text-decoration: underline;
     }
 
-    .closer-team-links .closer-mail-link {
-      word-break: break-all;
+    .closer-contact-mail {
+      color: var(--ink);
       font-weight: 500;
-      font-family: var(--font-body);
-      font-size: 0.88rem;
     }
 
     /* ---------- Slide 4: €30k (zelfde stack als slide 2–3) ---------- */
@@ -1263,10 +1228,6 @@
       margin-bottom: 2.25rem;
     }
 
-    .closer-cta-main {
-      margin-bottom: 2rem;
-    }
-
     .closer-channels {
       width: 100%;
       border-top: 1px solid var(--line);
@@ -1281,11 +1242,7 @@
       margin-bottom: 0;
     }
 
-    .closer-phone-wrap:not([hidden]) {
-      margin-bottom: 0.85rem !important;
-    }
-
-    .closer-channel-label {
+    .closer-channels p:last-child {
       display: inline-block;
       min-width: 3.75rem;
       font-family: var(--font-sub);
@@ -1311,15 +1268,16 @@
 
     .closer-signoff {
       width: 100%;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--line);
-      font-family: var(--font-head);
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(1.05rem, 1.3vw, 1.3rem);
+      margin: 0 0 clamp(1.5rem, 3.5vh, 2.25rem);
+      padding: 0;
+      border: none;
+      font-family: var(--font-sub);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.32rem, 2.05vw, 1.82rem);
       color: var(--ink-soft);
-      line-height: 1.5;
+      line-height: 1.52;
+      max-width: min(48ch, 94vw);
     }
 
     .closer-signoff strong {
@@ -1414,7 +1372,6 @@
       .row .row-detail { grid-column: 2; text-align: left; }
       .cta-block { grid-template-columns: 1fr; gap: 1.5rem; }
       .slide { padding: 5vh 6vw 10vh; }
-      .closer-team-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1685,48 +1642,15 @@
       <div class="closer-body">
         <h1 class="closer-title closer-title--question">Word jij partner in dit verhaal?</h1>
 
-        <div class="closer-team-grid">
-          <article class="closer-team-card">
-            <h2>Stijn</h2>
-            <p class="closer-team-meta">Back to Being · Amsterdam</p>
-            <div class="closer-team-links">
-              <a class="closer-mail-link"
-                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner">Caesar.schoorl@gmail.com</a>
-              <a href="https://www.linkedin.com/in/stijn-smit-a779b1193/"
-                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
-            </div>
-          </article>
-          <article class="closer-team-card">
-            <h2>Max</h2>
-            <p class="closer-team-meta">Back to Being · Amsterdam</p>
-            <div class="closer-team-links">
-              <a class="closer-mail-link"
-                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner">Caesar.schoorl@gmail.com</a>
-              <a href="https://www.linkedin.com/in/max-helmantel-852572167/"
-                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
-            </div>
-          </article>
-          <article class="closer-team-card">
-            <h2>Caesar</h2>
-            <p class="closer-team-meta">Back to Being · Amsterdam</p>
-            <div class="closer-team-links">
-              <a class="closer-mail-link"
-                href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner">Caesar.schoorl@gmail.com</a>
-              <a href="https://www.linkedin.com/in/caesar-schoorl-16232b229/"
-                target="_blank" rel="noopener noreferrer">LinkedIn-profiel →</a>
-            </div>
-          </article>
-        </div>
-
-        <a class="cta-button closer-cta-main"
-          href="https://calendly.com/caesardigitalmarketer"
-          target="_blank" rel="noopener noreferrer">
-          Plan een gesprek via Calendly <span class="arrow">→</span>
-        </a>
-
         <p class="closer-signoff">
           <strong>De wereld als ons kantoor.</strong> We horen graag of jullie met ons dit hoofdstuk willen schrijven.
         </p>
+
+        <div class="closer-contact-block">
+          <a class="closer-contact-mail"
+            href="mailto:Caesar.schoorl@gmail.com?subject=Back%20to%20Being%3A%20partner">Caesar.schoorl@gmail.com</a>
+          <a href="tel:+31683032377">+31&nbsp;6&nbsp;83032377</a>
+        </div>
       </div>
     </section>
 
@@ -1747,9 +1671,6 @@
       const prevBtn = document.getElementById('prev');
       const nextBtn = document.getElementById('next');
       let current = 0;
-
-      const CONTACT_PHONE_E164_DIGITS = '31683032377';
-      const CONTACT_PHONE_SHOW = '+31 6 83032377';
 
       slides.forEach((slide, i) => {
         const dot = document.createElement('button');
@@ -1797,21 +1718,6 @@
       });
 
       prevBtn.disabled = true;
-
-      (function applyContactPhone() {
-        var wrap = document.querySelector('.closer-phone-wrap');
-        var link = document.querySelector('.closer-phone-link');
-        if (!wrap || !link) return;
-        var clean = String(CONTACT_PHONE_E164_DIGITS || '').replace(/\D/g, '');
-        if (/^06\d{8}$/.test(clean)) clean = '31' + clean.slice(1);
-        if (clean.length >= 11) {
-          wrap.hidden = false;
-          link.href = 'tel:+' + clean;
-          link.textContent = CONTACT_PHONE_SHOW.trim() ? CONTACT_PHONE_SHOW : ('+' + clean);
-        } else {
-          wrap.hidden = true;
-        }
-      })();
 
       ['cta-wat-doen-next', 'cta-waarom-next', 'cta-partners-next', 'cta-recap-next'].forEach(function (buttonId) {
         var btn = document.getElementById(buttonId);
