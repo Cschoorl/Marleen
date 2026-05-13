@@ -616,102 +616,92 @@
       margin-bottom: 1.75rem;
       max-width: 42ch;
     }
-    .slide-budget .lede {
-      max-width: min(68ch, 94vw);
-      font-size: clamp(1.02rem, 1.22vw, 1.18rem);
-      line-height: 1.55;
-    }
-
-    .budget-board {
+    /* ---------- Slide 5: Partners (social proof) ---------- */
+    .slide.slide-partners.slide--center .topbar {
+      margin-bottom: clamp(2vh, 4vw, 4vh);
       width: 100%;
-      max-width: 46rem;
-      margin: 1.5vh auto 0;
-      border: 1.5px solid var(--line);
-      border-radius: 14px;
-      padding: clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 2.5vw, 2rem);
-      background: rgba(167, 189, 213, 0.14);
     }
 
-    .budget-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: var(--font-body);
-      font-size: clamp(0.98rem, 1.12vw, 1.1rem);
-    }
-
-    .budget-table tr {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .budget-table tr:last-child {
-      border-bottom: none;
-    }
-
-    .budget-table td {
-      padding: 0.62rem 0;
-      vertical-align: baseline;
-    }
-
-    .budget-table td:first-child {
-      color: var(--ink);
-      padding-right: 1rem;
-    }
-
-    .budget-table td:last-child {
-      text-align: right;
-      white-space: nowrap;
-      font-weight: 600;
-      font-variant-numeric: tabular-nums;
-      color: var(--creek);
-    }
-
-    .budget-foot {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--line);
-      font-family: var(--font-sub);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .budget-aside {
-      max-width: min(68ch, 94vw);
-      margin: 2vh auto 0;
-      font-family: var(--font-body);
-      font-size: clamp(0.95rem, 1.1vw, 1.05rem);
-      line-height: 1.55;
-      color: var(--ink-soft);
-      text-align: center;
-    }
-
-    .budget-aside strong {
-      color: var(--tree);
-      font-weight: 600;
-    }
-
-    .micro-note {
-      max-width: min(62ch, 92vw);
-      margin: 1.25vh auto 0;
-      font-family: var(--font-body);
-      font-size: clamp(0.82rem, 0.95vw, 0.92rem);
-      line-height: 1.5;
-      color: var(--ink-soft);
-      font-style: italic;
-      text-align: center;
-    }
-
-    .slide-budget.slide--center .headline {
+    .slide-partners.slide--center .headline {
       font-family: var(--font-sub);
       font-weight: 600;
       font-style: normal;
-      max-width: min(44ch, 96vw);
-      margin-bottom: 0.65rem;
+      max-width: min(46ch, 94vw);
+      margin-bottom: clamp(0.65rem, 1.5vh, 1rem);
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .slide-partners .partner-lede {
+      font-family: var(--font-sub);
+      font-weight: 600;
+      font-size: clamp(0.72rem, 0.95vw, 0.82rem);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--tree);
+      text-align: center;
+      margin: 0 0 clamp(1.25rem, 3vh, 2rem);
+    }
+
+    .slide-partners .partner-logos {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(1rem, 2.5vw, 1.75rem);
+      width: 100%;
+      max-width: min(52rem, 94vw);
+      margin: 0 auto;
+      flex: 1;
+      align-items: stretch;
+    }
+
+    .slide-partners .partner-logo-tile {
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      background: rgba(167, 189, 213, 0.14);
+      padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.5rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: clamp(5.25rem, 13vh, 7.5rem);
+    }
+
+    .slide-partners .partner-logo-tile img {
+      max-width: min(100%, 11rem);
+      max-height: clamp(2rem, 4.5vw, 3rem);
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(0.08);
+      opacity: 0.92;
+    }
+
+    .slide-partners .partner-logo-name {
+      font-family: var(--font-sub);
+      font-weight: 600;
+      font-size: clamp(1.08rem, 1.55vw, 1.42rem);
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-align: center;
+      line-height: 1.15;
+    }
+
+    .slide-partners .partner-logo-name--caps {
+      letter-spacing: 0.18em;
+      font-size: clamp(0.98rem, 1.35vw, 1.2rem);
+    }
+
+    .slide-partners .slide-partners-cta {
+      margin-top: clamp(1.75rem, 4.5vh, 3rem);
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media (max-width: 720px) {
+      .slide-partners .partner-logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     .slide-doel .headline {
@@ -723,10 +713,6 @@
       line-height: 1.14;
       letter-spacing: -0.03em;
       margin-bottom: clamp(1rem, 2vh, 1.5rem);
-    }
-
-    .slide-budget .slide-q-sub.slide-q-sub--center {
-      margin-bottom: clamp(1rem, 2.5vh, 1.75rem);
     }
 
     .slide-vervolg .cta-block {
@@ -1352,7 +1338,6 @@
       .row .row-detail { grid-column: 2; text-align: left; }
       .cta-block { grid-template-columns: 1fr; gap: 1.5rem; }
       .slide { padding: 5vh 6vw 10vh; }
-      .budget-table td:last-child { white-space: normal; }
     }
   </style>
 </head>
@@ -1503,8 +1488,8 @@
       </div>
     </section>
 
-    <!-- ============ SLIDE 5: BUDGET ============ -->
-    <section class="slide slide-budget slide--center" data-index="4">
+    <!-- ============ SLIDE 5: PARTNERS ============ -->
+    <section class="slide slide--center slide-partners" data-index="4">
       <div class="topbar">
         <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
@@ -1515,48 +1500,33 @@
       </div>
 
       <h1 class="headline">
-        Waar gaat het budget naartoe?
+        Word jij partner in dit verhaal?
       </h1>
-      <p class="slide-q-sub slide-q-sub--center">
-        Indicatie per post—flexibel met partners tot het totaal van €30.000.
+      <p class="partner-lede">
+        Ze lopen nu al met ons mee.
       </p>
 
-      <p class="lede lede--wide">
-        Bijvoorbeeld €2.000, €5.000 of €7.000 per partner: we schalen inhoudelijke
-        tegenprestatie mee, zonder starre pakketten.
-      </p>
-
-      <div class="budget-board">
-        <table class="budget-table" aria-label="Globale budgetindicatie (richting)">
-          <tbody>
-            <tr><td>Tech &amp; AI (hardware, credits, tooling)</td><td>€&nbsp;11.500</td></tr>
-            <tr><td>Documentaire</td><td>€&nbsp;7.500</td></tr>
-            <tr><td>Productie (crew, planning, post)</td><td>€&nbsp;3.500</td></tr>
-            <tr><td>Reiskosten</td><td>€&nbsp;2.800</td></tr>
-            <tr><td>Voeding</td><td>€&nbsp;900</td></tr>
-            <tr><td>Kleding &amp; uitrusting</td><td>€&nbsp;700</td></tr>
-            <tr><td>Overige benodigdheden</td><td>€&nbsp;500</td></tr>
-            <tr><td>Partnerstrategie &amp; outreach</td><td>€&nbsp;2.600</td></tr>
-          </tbody>
-        </table>
-        <div class="budget-foot">
-          <span>Indicatief totaal</span>
-          <span>€&nbsp;30.000</span>
+      <div class="partner-logos" role="list">
+        <div class="partner-logo-tile" role="listitem">
+          <span class="partner-logo-name">TechLeap</span>
+        </div>
+        <div class="partner-logo-tile" role="listitem">
+          <span class="partner-logo-name">AIAM</span>
+        </div>
+        <div class="partner-logo-tile" role="listitem">
+          <span class="partner-logo-name partner-logo-name--caps">TAG</span>
+        </div>
+        <div class="partner-logo-tile" role="listitem">
+          <span class="partner-logo-name">Lerai</span>
         </div>
       </div>
 
-      <p class="budget-aside">
-        <strong>TechLeap</strong> staat al in het traject als partner rond strategie en netwerk.
-        We benaderen andere partijen met het idee dat er al inhoudelijke interesse is vanuit
-        relevante namen. Zodra één sterke partner instapt, wordt het voor volgende sponsors
-        eenvoudiger om vertrouwen te krijgen in dit project.
-      </p>
-
-      <p class="micro-note">
-        Optioneel kunnen we naast de hoofddocumentaire korte, sponsor-specifieke clips maken
-        die laten zien hoe jullie bijdrage landt in het verhaal, zolang de hoofddocu herkenbaar
-        als verhaal blijft en niet als een reclameblock voelt.
-      </p>
+      <div class="slide-partners-cta">
+        <button type="button" class="cta-button" id="cta-partners-next"
+          aria-label="Volgende slide">
+          Loop jij ook met ons mee? <span class="arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
     </section>
 
     <!-- ============ SLIDE 6: VERVOLG / CTA ============ -->
@@ -1763,7 +1733,7 @@
         });
       }
 
-      ['cta-wat-doen-next', 'cta-waarom-next'].forEach(function (buttonId) {
+      ['cta-wat-doen-next', 'cta-waarom-next', 'cta-partners-next'].forEach(function (buttonId) {
         var btn = document.getElementById(buttonId);
         if (!btn) return;
         btn.addEventListener('click', function () {
