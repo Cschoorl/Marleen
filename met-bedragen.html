@@ -511,33 +511,34 @@
     .slide-wat-doen .wat-doen-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(2.25rem, 4.5vw, 4rem);
-      column-gap: clamp(2.5rem, 6vw, 5.5rem);
+      gap: clamp(2rem, 4vw, 3.25rem);
+      column-gap: clamp(2.75rem, 7vw, 6rem);
+      row-gap: clamp(2rem, 3.5vh, 2.75rem);
       width: 100%;
       max-width: none;
       margin: 0;
       align-self: stretch;
       flex: 1;
+      align-items: start;
     }
 
-    .slide-wat-doen .wat-doen-col {
-      display: flex;
-      flex-direction: column;
-      gap: clamp(1.15rem, 2.2vh, 1.65rem);
+    .slide-wat-doen .wat-doen-block {
       min-width: 0;
     }
 
-    .slide-wat-doen .wat-doen-col p {
-      font-family: var(--font-body);
+    /* Zelfde familie als cover-tagline (pagina 1): Inter Tight */
+    .slide-wat-doen .wat-doen-block p {
+      font-family: var(--font-sub);
       font-style: normal;
       font-weight: 400;
-      font-size: clamp(1.06rem, 1.38vw, 1.28rem);
-      line-height: 1.62;
+      font-size: clamp(1.05rem, 1.42vw, 1.38rem);
+      letter-spacing: 0.01em;
+      line-height: 1.55;
       color: var(--ink-soft);
       margin: 0;
     }
 
-    .slide-wat-doen .wat-doen-col p strong {
+    .slide-wat-doen .wat-doen-block p strong {
       color: var(--tree);
       font-weight: 600;
     }
@@ -1397,31 +1398,19 @@
       </h1>
 
       <div class="wat-doen-grid">
-        <div class="wat-doen-col">
+        <div class="wat-doen-block">
           <p>
-            Wij zijn drie AI-nerds uit Amsterdam—founders, maar vooral mensen die
-            liever bouwen dan slides maken.
-          </p>
-          <p>
-            Deze zomer lopen we de Camino van Tui naar Santiago en bouwen onderweg live
-            aan één AI-tool voor mentale gezondheid.
-          </p>
-          <p>
-            Daarna dragen we die over aan stichting MIND; sponsors maken reis, productie
-            en overdracht voor ons mogelijk.
+            Drie AI-nerds uit Amsterdam lopen deze zomer de Camino van Tui naar Santiago en
+            bouwen onderweg live aan één AI-tool voor mentale gezondheid. Daarna dragen we die
+            <strong>gratis</strong> over aan <strong>MIND</strong>—sponsors maken reis,
+            productie en overdracht mogelijk.
           </p>
         </div>
-        <div class="wat-doen-col">
+        <div class="wat-doen-block">
           <p>
-            De tool die we onderweg bouwen, dragen we <strong>gratis</strong> over aan MIND.
-          </p>
-          <p>
-            Wat het precies wordt, bepalen we samen met hen: hun behoefte is leidend, ons
-            werk is iets bruikbaars bouwen.
-          </p>
-          <p>
-            Zo blijft het concreet—een route, een proces in de open lucht en een eindproduct
-            bij een organisatie die werkt aan mentale gezondheid.
+            Samen met MIND bepalen we wat we bouwen: hun behoefte leidt, wij leveren iets
+            bruikbaars. Zo blijft het verhaal concreet—een route in het landschap, bouwen in de
+            open lucht en een eindproduct bij een organisatie die werkt aan mentale gezondheid.
           </p>
         </div>
       </div>
