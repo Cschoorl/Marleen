@@ -90,7 +90,7 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0;
       font-family: var(--font-sub);
       font-weight: 500;
       font-size: 0.88rem;
@@ -101,20 +101,16 @@
 
     .logo-img {
       display: block;
-      height: clamp(26px, 3.35vh, 34px);
+      height: clamp(36px, 4.5vh, 48px);
       width: auto;
-      max-width: min(200px, 44vw);
+      max-width: min(240px, 52vw);
       object-fit: contain;
-    }
-
-    .slide.cover .logo-img {
-      height: clamp(36px, 4.85vh, 52px);
-      max-width: min(280px, 58vw);
+      flex-shrink: 0;
+      border-radius: 10px;
     }
 
     .slide.dark .logo-img {
       box-shadow: 0 0 0 1px rgba(167, 189, 213, 0.12);
-      border-radius: 10px;
     }
 
     .topbar-right {
@@ -412,7 +408,7 @@
     }
 
     .slide.cover .topbar {
-      justify-content: flex-start;
+      justify-content: space-between;
     }
 
     /* ---------- Slide 5: goal (clean, no box) ---------- */
@@ -706,7 +702,7 @@
     <!-- ============ SLIDE 1: COVER ============ -->
     <section class="slide cover active" data-index="0">
       <div class="topbar">
-        <div class="logo logo--brand">
+        <div class="logo">
           <img
             class="logo-img"
             src="assets/brand/logo-lockup-darkbg.png"
@@ -715,6 +711,9 @@
             alt="Back to Being"
             decoding="async"
           />
+        </div>
+        <div class="topbar-right">
+          <span>01 / 06</span>
         </div>
       </div>
 
@@ -739,7 +738,7 @@
     <!-- ============ SLIDE 2: WAT IS DIT? ============ -->
     <section class="slide" data-index="1">
       <div class="topbar">
-        <div class="logo logo--brand">
+        <div class="logo">
           <img
             class="logo-img"
             src="assets/brand/logo-lockup-darkbg.png"
@@ -748,6 +747,9 @@
             alt="Back to Being"
             decoding="async"
           />
+        </div>
+        <div class="topbar-right">
+          <span>02 / 06</span>
         </div>
       </div>
 
@@ -769,7 +771,7 @@
     <!-- ============ SLIDE 3: WAAROM ============ -->
     <section class="slide" data-index="2">
       <div class="topbar">
-        <div class="logo logo--brand">
+        <div class="logo">
           <img
             class="logo-img"
             src="assets/brand/logo-lockup-darkbg.png"
@@ -816,7 +818,7 @@
     <!-- ============ SLIDE 4: HET DOEL ============ -->
     <section class="slide" data-index="3">
       <div class="topbar">
-        <div class="logo logo--brand">
+        <div class="logo">
           <img
             class="logo-img"
             src="assets/brand/logo-lockup-darkbg.png"
@@ -875,7 +877,7 @@
     <!-- ============ SLIDE 5: PARTNER ============ -->
     <section class="slide" data-index="4">
       <div class="topbar">
-        <div class="logo logo--brand">
+        <div class="logo">
           <img
             class="logo-img"
             src="assets/brand/logo-lockup-darkbg.png"
@@ -946,7 +948,7 @@
     <!-- ============ SLIDE 6: CLOSER ============ -->
     <section class="slide closer" data-index="5">
       <div class="topbar">
-        <div class="logo logo--brand">
+        <div class="logo">
           <img
             class="logo-img"
             src="assets/brand/logo-lockup-darkbg.png"
