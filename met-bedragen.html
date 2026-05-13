@@ -39,7 +39,6 @@
       --font-body:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --logo-mark-svg:       url("assets/SVG/LOGOMARK_B2B.svg");
       --logo-mark-svg-light: url("assets/SVG/LOGOMARK_B2B_light.svg");
-      --logo-mark-svg-cover: url("assets/SVG/LOGOMARK_B2B_cover.svg");
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -113,7 +112,7 @@
     .slide.cover .logo-mark {
       width: 56px;
       height: 30px;
-      background: var(--logo-mark-svg-cover) center / contain no-repeat;
+      background: var(--logo-mark-svg) center / contain no-repeat;
     }
 
     .slide.dark .logo-mark {
@@ -200,7 +199,7 @@
 
     .slide.dark .lede { color: rgba(247, 245, 240, 0.7); }
 
-    /* ---------- Slide 1: COVER (wit + blauw accent) ---------- */
+    /* ---------- Slide 1: COVER (wit + groen accent, zelfde familie als deck) ---------- */
     .slide.cover {
       justify-content: space-between;
       background: #ffffff;
@@ -218,7 +217,7 @@
     }
 
     .slide.cover .cover-headline em {
-      color: var(--creek);
+      color: var(--tree);
     }
 
     .cover-foot {
@@ -227,7 +226,7 @@
       align-items: end;
       gap: 2vw;
       padding-top: 2.5vh;
-      border-top: 1px solid rgba(66, 77, 105, 0.28);
+      border-top: 1px solid rgba(42, 55, 35, 0.18);
       margin-top: 6vh;
     }
 
@@ -244,7 +243,7 @@
     }
 
     .slide.cover .cover-foot-meta {
-      color: var(--creek);
+      color: var(--tree);
     }
 
     .cover-tagline {
@@ -260,7 +259,7 @@
 
     .cover-tagline-accent {
       display: inline;
-      color: var(--creek);
+      color: var(--tree);
       font-weight: 600;
     }
 
