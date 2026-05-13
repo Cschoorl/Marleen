@@ -536,7 +536,142 @@
       font-weight: 600;
     }
 
-    /* Budget-overzicht (vervangt vaste sponsortiers) */
+    /* Ondertitel bij vraag-koppen (door het deck) */
+    .slide-q-sub {
+      font-family: var(--font-sub);
+      font-weight: 500;
+      font-size: clamp(1.02rem, 1.28vw, 1.18rem);
+      line-height: 1.45;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    .slide-q-sub--center {
+      text-align: center;
+      max-width: min(42ch, 92vw);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slide-q-sub--start {
+      text-align: left;
+      margin-bottom: clamp(1rem, 2vh, 1.5rem);
+      max-width: 44ch;
+    }
+
+    /* ---------- Slide 3: Waarom (3 blokken, volledige breedte) ---------- */
+    .slide.slide-waarom.slide--center {
+      align-items: stretch;
+      padding: 8vh 5vw 11vh;
+    }
+
+    .slide-waarom.slide--center .topbar {
+      margin-bottom: clamp(3vh, 5vw, 5vh);
+    }
+
+    .slide-waarom .slide-q-head {
+      align-self: center;
+      text-align: center;
+      margin-bottom: clamp(2.25rem, 5vh, 3.5rem);
+      width: 100%;
+      max-width: min(56ch, 96vw);
+    }
+
+    .slide-waarom .slide-q-head .headline {
+      font-family: var(--font-sub);
+      font-weight: 600;
+      font-style: normal;
+      font-size: clamp(2.05rem, 4vw, 3.35rem);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      max-width: none;
+      margin-bottom: 0.65rem;
+      text-align: center;
+    }
+
+    .slide-waarom .slide-q-head .slide-q-sub {
+      font-size: clamp(1.08rem, 1.48vw, 1.28rem);
+      font-weight: 500;
+    }
+
+    .slide-waarom .waarom-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1.15rem, 2.5vw, 2rem);
+      width: 100%;
+      flex: 1;
+      align-items: stretch;
+    }
+
+    .slide-waarom .waarom-block {
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      padding: clamp(1.15rem, 2.2vw, 1.65rem);
+      min-height: 0;
+      background: transparent;
+    }
+
+    .slide-waarom .waarom-block p {
+      font-family: var(--font-sub);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.05rem, 1.42vw, 1.38rem);
+      letter-spacing: 0.01em;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    .slide-waarom .waarom-block p strong {
+      color: var(--tree);
+      font-weight: 600;
+    }
+
+    @media (max-width: 960px) {
+      .slide-waarom .waarom-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Slide 6: vraagkop + sub */
+    .slide-vervolg .slide-q-head {
+      align-self: center;
+      text-align: center;
+      margin-bottom: clamp(1.25rem, 3vh, 2rem);
+      width: 100%;
+      max-width: min(52ch, 94vw);
+    }
+
+    .slide-vervolg .slide-q-head .headline {
+      font-family: var(--font-sub);
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: -0.03em;
+      max-width: min(40ch, 96vw);
+      margin-bottom: 0.65rem;
+    }
+
+    .slide-vervolg .slide-q-head .slide-q-sub {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Slide 7: contact als antwoord op vraag */
+    .closer-title.closer-title--question {
+      font-family: var(--font-sub);
+      font-weight: 600;
+      font-style: normal;
+      font-size: clamp(2.05rem, 4vw, 3.35rem);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.65rem;
+      max-width: min(44ch, 96vw);
+    }
+
+    .slide-q-sub--closer {
+      margin-bottom: 1.75rem;
+      max-width: 42ch;
+    }
     .slide-budget .lede {
       max-width: min(68ch, 94vw);
       font-size: clamp(1.02rem, 1.22vw, 1.18rem);
@@ -628,7 +763,22 @@
     }
 
     .slide-budget.slide--center .headline {
-      max-width: min(30ch, 94vw);
+      font-family: var(--font-sub);
+      font-weight: 600;
+      font-style: normal;
+      max-width: min(44ch, 96vw);
+      margin-bottom: 0.65rem;
+    }
+
+    .slide-doel .headline {
+      font-family: var(--font-sub);
+      font-weight: 600;
+      font-style: normal;
+      max-width: none;
+    }
+
+    .slide-budget .slide-q-sub.slide-q-sub--center {
+      margin-bottom: clamp(1rem, 2.5vh, 1.75rem);
     }
 
     .slide-vervolg .cta-block {
@@ -1399,60 +1549,67 @@
       </div>
     </section>
 
-    <!-- ============ SLIDE 3: WAAROM (verhaal) ============ -->
-    <section class="slide slide--center" data-index="2">
+    <!-- ============ SLIDE 3: WAAROM ============ -->
+    <section class="slide slide--center slide-waarom" data-index="2">
       <div class="topbar">
         <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
         </div>
         <div class="topbar-right">
-          <span>Waarom</span>
           <span>03 / 07</span>
         </div>
       </div>
 
-      <span class="pill">De filosofie</span>
-
-      <h1 class="headline">
-        We nemen kantoor mee naar buiten
-      </h1>
-
-      <div class="story-frame story-frame--prose-lg">
-        <p>
-          Niet bouwen vanachter een bureau, maar lopend, reflecterend en in
-          beweging. We laten zien dat tech ons juist <strong>menselijker</strong>
-          kan maken, als je hem op de goede manier inzet.
+      <div class="slide-q-head">
+        <h1 class="headline">
+          Waarom nog op kantoor?
+        </h1>
+        <p class="slide-q-sub slide-q-sub--center">
+          We nemen het kantoor mee naar buiten
         </p>
-        <p>
-          De werkweek voelt voor veel mensen sneller digitaal dan menselijk,
-          terwijl AI juist ruimte zou moeten geven voor wie we zijn. Mentale
-          gezondheid raakt iedereen en wij willen laten zien dat je technologie
-          daar nuchter én warm bij kunt laten aansluiten. Voor ons schuift
-          beweging ruis opzij. Lopen is scherp denken en scherp denken is
-          bouwen. Een mini-docu vangt daarna de spanning tussen zweet en
-          software, voor MIND, voor het publiek en voor partners die het
-          aandurven om mee te financieren.
-        </p>
+      </div>
+
+      <div class="waarom-grid">
+        <div class="waarom-block">
+          <p>
+            Met <strong>AI</strong> kun je ongelooflijk veel versnellen—en toch zitten veel
+            kenniswerkers nog steeds <strong>veertig uur per week achter een bureau</strong>,
+            alsof er niets fundamenteels verandert.
+          </p>
+        </div>
+        <div class="waarom-block">
+          <p>
+            De werkweek voelt voor veel mensen sneller digitaal dan menselijk. Terwijl technologie
+            juist ruimte zou moeten geven voor wie we zijn—zeker rond <strong>mentale gezondheid</strong>.
+          </p>
+        </div>
+        <div class="waarom-block">
+          <p>
+            Wij trekken dat door naar het <strong>extreme</strong>: de <strong>Camino</strong> als
+            kantoor, live bouwen onderweg en een mini-docu die laat hoe zweet en software samenkomen—
+            voor MIND, het publiek en partners die durven te sponsoren.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- ============ SLIDE 4: HET DOEL ============ -->
-    <section class="slide" data-index="3">
+    <section class="slide slide-doel" data-index="3">
       <div class="topbar">
         <div class="logo logo--icon-only" aria-label="back to being">
           <span class="logo-mark" aria-hidden="true"></span>
         </div>
         <div class="topbar-right">
-          <span>Het doel</span>
           <span>04 / 07</span>
         </div>
       </div>
 
-      <span class="pill">Het doel</span>
-
       <h1 class="headline">
-        Help ons <em>€30.000</em> op te halen
+        Waarom €30.000?
       </h1>
+      <p class="slide-q-sub slide-q-sub--start">
+        Om dit verhaal inhoudelijk goed uit te voeren én professioneel zichtbaar te maken.
+      </p>
 
       <div class="goal-hero-clean">
         <div class="goal-amount-clean">€30.000</div>
@@ -1492,22 +1649,20 @@
           <span class="logo-mark" aria-hidden="true"></span>
         </div>
         <div class="topbar-right">
-          <span>Budget</span>
           <span>05 / 07</span>
         </div>
       </div>
 
-      <span class="pill">Transparantie</span>
-
       <h1 class="headline">
-        Waar gaat het budget<br />
-        <em>naartoe?</em>
+        Waar gaat het budget naartoe?
       </h1>
+      <p class="slide-q-sub slide-q-sub--center">
+        Indicatie per post—flexibel met partners tot het totaal van €30.000.
+      </p>
 
       <p class="lede lede--wide">
-        We werken met flexibele sponsoring: de ene partner draagt bijvoorbeeld €2.000,
-        een andere €5.000 of €7.000, zolang we samen richting €30.000 gaan. Geen vaste
-        pakketten waar je in moet passen, wel heldere afspraken per partner.
+        Bijvoorbeeld €2.000, €5.000 of €7.000 per partner: we schalen inhoudelijke
+        tegenprestatie mee, zonder starre pakketten.
       </p>
 
       <div class="budget-board">
@@ -1550,20 +1705,22 @@
           <span class="logo-mark" aria-hidden="true"></span>
         </div>
         <div class="topbar-right">
-          <span>Vervolg</span>
           <span>06 / 07</span>
         </div>
       </div>
 
-      <span class="pill">Meedoen</span>
-
-      <h1 class="headline">
-        Wil jij een rol spelen in het <em>verhaal</em> dat wij gaan vertellen?
-      </h1>
+      <div class="slide-q-head">
+        <h1 class="headline">
+          Wil jij een rol spelen in het verhaal dat wij gaan vertellen?
+        </h1>
+        <p class="slide-q-sub slide-q-sub--center">
+          Van eerste gesprek naar concrete afspraken—zonder eindeloze trajecten.
+        </p>
+      </div>
 
       <p class="lede lede--wide">
-        Geen eindeloze trajecten: we plannen een korte call, zetten afspraken scherp en gaan
-        daarna het pad op. Jouw bijdrage schalen we inhoudelijk mee, zonder starre tier-lijst.
+        We plannen een korte call, zetten afspraken scherp en gaan daarna het pad op.
+        Jouw bijdrage schalen we inhoudelijk mee, zonder starre tier-lijst.
       </p>
 
       <div class="story-frame story-frame--prose-lg">
@@ -1604,17 +1761,17 @@
           <span class="logo-mark" aria-hidden="true"></span>
         </div>
         <div class="topbar-right">
-          <span>Contact</span>
           <span>07 / 07</span>
         </div>
       </div>
 
       <div class="closer-body">
-        <h1 class="closer-title">Contact</h1>
+        <h1 class="closer-title closer-title--question">Waar bereiken jullie ons?</h1>
+        <p class="slide-q-sub slide-q-sub--closer">
+          Locatie, mail en een uitnodiging om te sparren over Back to Being.
+        </p>
         <p class="closer-intro">
-          Net als op een contactpagina op de site: hier vind je waar we zitten, hoe je ons
-          bereikt en wat de uitnodiging is. Stuur dit deck intern rond of neem direct contact op,
-          wat voor jou het snelst helderheid geeft.
+          Stuur dit deck intern rond of neem direct contact op—wat voor jou het snelst helderheid geeft.
         </p>
 
         <div class="closer-actions">
