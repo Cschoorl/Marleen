@@ -266,6 +266,24 @@
       opacity: 0.95;
     }
 
+    .cover-foot-logos a {
+      display: flex;
+      align-items: center;
+      line-height: 0;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .cover-foot-logos a:hover img {
+      opacity: 1;
+      filter: brightness(0.94);
+    }
+
+    .cover-foot-logos a:focus-visible {
+      outline: 2px solid var(--creek);
+      outline-offset: 3px;
+    }
+
     .cover-tagline {
       font-family: var(--font-sub);
       font-style: normal;
@@ -769,6 +787,23 @@
       max-width: min(11.5rem, 28vw);
       object-fit: contain;
       opacity: 1;
+    }
+
+    .partner-strip a {
+      display: flex;
+      align-items: center;
+      line-height: 0;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .partner-strip a:hover img {
+      filter: brightness(0.94);
+    }
+
+    .partner-strip a:focus-visible {
+      outline: 2px solid var(--creek);
+      outline-offset: 4px;
     }
 
     .slide-partners .slide-partners-cta {
@@ -1430,39 +1465,63 @@
         <div class="cover-foot-partners">
           <p class="cover-foot-partners-kicker">Zij lopen al mee:</p>
           <div class="cover-foot-logos" role="group" aria-label="Partners">
-          <img
-            src="assets/partners/techleap-wordmark.png"
-            alt="TechLeap"
-            width="149"
-            height="53"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="assets/partners/ai-am-wordmark.png"
-            alt="ai.am"
-            width="149"
-            height="49"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="assets/partners/lerai-wordmark.png"
-            alt="Lerai"
-            width="102"
-            height="54"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="assets/partners/tag-wordmark.png"
-            alt="TAG"
-            width="116"
-            height="37"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
+            <a
+              href="https://techleap.nl/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/partners/techleap-wordmark.png"
+                alt="TechLeap"
+                width="149"
+                height="53"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a
+              href="https://aiam.amsterdam/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/partners/ai-am-wordmark.png"
+                alt="ai.am"
+                width="149"
+                height="49"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a
+              href="https://www.lerai.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/partners/lerai-wordmark.png"
+                alt="Lerai"
+                width="102"
+                height="54"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a
+              href="https://www.tag.space/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/partners/tag-wordmark.png"
+                alt="TAG"
+                width="116"
+                height="37"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -1651,10 +1710,18 @@
       </p>
 
       <div class="partner-strip" role="group" aria-label="Partners">
-        <img src="assets/partners/techleap-wordmark.png" alt="TechLeap" width="149" height="53" loading="lazy" decoding="async" />
-        <img src="assets/partners/ai-am-wordmark.png" alt="ai.am" width="149" height="49" loading="lazy" decoding="async" />
-        <img src="assets/partners/lerai-wordmark.png" alt="Lerai" width="102" height="54" loading="lazy" decoding="async" />
-        <img src="assets/partners/tag-wordmark.png" alt="TAG" width="116" height="37" loading="lazy" decoding="async" />
+        <a href="https://techleap.nl/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/partners/techleap-wordmark.png" alt="TechLeap" width="149" height="53" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://aiam.amsterdam/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/partners/ai-am-wordmark.png" alt="ai.am" width="149" height="49" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://www.lerai.ai/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/partners/lerai-wordmark.png" alt="Lerai" width="102" height="54" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://www.tag.space/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/partners/tag-wordmark.png" alt="TAG" width="116" height="37" loading="lazy" decoding="async" />
+        </a>
       </div>
 
       <div class="slide-partners-cta">
