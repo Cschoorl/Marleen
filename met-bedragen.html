@@ -225,6 +225,27 @@
       margin-top: 6vh;
     }
 
+    .cover-foot-partners {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.55rem;
+      flex-shrink: 0;
+      max-width: min(24rem, 46vw);
+    }
+
+    .cover-foot-partners-kicker {
+      font-family: var(--font-sub);
+      font-size: clamp(0.72rem, 0.95vw, 0.82rem);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--tree);
+      margin: 0;
+      text-align: right;
+      width: 100%;
+    }
+
     .cover-foot-logos {
       display: flex;
       flex-wrap: wrap;
@@ -233,8 +254,7 @@
       align-content: flex-end;
       gap: clamp(0.55rem, 1.5vw, 1rem);
       row-gap: 0.5rem;
-      flex-shrink: 0;
-      max-width: min(24rem, 46vw);
+      width: 100%;
     }
 
     .cover-foot-logos img {
@@ -1407,7 +1427,9 @@
           live bouwen in beeld, daarna een echte overdracht aan MIND.
           <span class="cover-tagline-accent">Sponsoring zet dit verhaal op de kaart. Loop je met ons mee?</span>
         </p>
-        <div class="cover-foot-logos" role="group" aria-label="Partners">
+        <div class="cover-foot-partners">
+          <p class="cover-foot-partners-kicker">Zij lopen al mee:</p>
+          <div class="cover-foot-logos" role="group" aria-label="Partners">
           <img
             src="assets/partners/techleap-wordmark.png"
             alt="TechLeap"
@@ -1440,6 +1462,7 @@
             loading="lazy"
             decoding="async"
           />
+        </div>
         </div>
       </div>
     </section>
