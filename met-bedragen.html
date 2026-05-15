@@ -38,6 +38,12 @@
       --font-head:   "Instrument Serif", Georgia, "Times New Roman", serif;
       --font-sub:    "Inter Tight", "Inter", -apple-system, sans-serif;
       --font-body:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+      /* Gelijke linker/rechter inset + topbar-ruimte op alle slides */
+      --slide-pad-x: clamp(1.5rem, 6.25vw, 5rem);
+      --slide-pad-top: 8vh;
+      --slide-pad-bottom: 11vh;
+      --topbar-margin-bottom: clamp(3vh, 4.25vw, 4.75vh);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,7 +70,7 @@
       inset: 0;
       display: flex;
       flex-direction: column;
-      padding: 7vh 9vw 12vh;
+      padding: var(--slide-pad-top) var(--slide-pad-x) var(--slide-pad-bottom);
       opacity: 0;
       transform: translateY(12px);
       transition: opacity 0.55s ease, transform 0.55s ease;
@@ -84,7 +90,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 4vh;
+      align-self: stretch;
+      width: 100%;
+      margin-bottom: var(--topbar-margin-bottom);
     }
 
     .logo {
@@ -101,17 +109,12 @@
 
     .logo-img {
       display: block;
-      height: clamp(36px, 4.5vh, 48px);
+      height: clamp(46px, 5.65vh, 64px);
       width: auto;
-      max-width: min(240px, 52vw);
+      max-width: min(310px, 64vw);
       object-fit: contain;
       flex-shrink: 0;
       border-radius: 10px;
-    }
-
-    .slide.cover .logo-img {
-      height: clamp(46px, 6vh, 64px);
-      max-width: min(300px, 62vw);
     }
 
     .slide.dark .logo-img {
@@ -456,8 +459,8 @@
     }
 
     .slide.slide--center .topbar {
+      align-self: stretch;
       width: 100%;
-      margin-bottom: 3vh;
     }
 
     .slide.slide--center .pill {
@@ -497,18 +500,6 @@
     .slide.slide-waarom.slide--center,
     .slide.slide-doel.slide--center {
       align-items: stretch;
-    }
-
-    .slide.slide-wat-doen,
-    .slide.slide-waarom,
-    .slide.slide-doel {
-      padding: 8vh 5vw 11vh;
-    }
-
-    .slide-wat-doen.slide--center .topbar,
-    .slide-waarom.slide--center .topbar,
-    .slide-doel.slide--center .topbar {
-      margin-bottom: clamp(3vh, 5vw, 5vh);
     }
 
     .slide-wat-doen.slide--center .headline,
@@ -649,12 +640,13 @@
 
     /* ---------- Slide 6: recap ---------- */
     .slide.slide-recap.slide--center {
-      padding: 8vh 5vw 10vh;
+      padding: var(--slide-pad-top) var(--slide-pad-x) 10vh;
       align-items: stretch;
     }
 
     .slide-recap.slide--center .topbar {
-      margin-bottom: clamp(2vh, 4vw, 4vh);
+      align-self: stretch;
+      margin-bottom: var(--topbar-margin-bottom);
       width: 100%;
     }
 
@@ -732,7 +724,8 @@
 
     /* ---------- Slide 5: Partners (social proof) ---------- */
     .slide.slide-partners.slide--center .topbar {
-      margin-bottom: clamp(2vh, 4vw, 4vh);
+      align-self: stretch;
+      margin-bottom: var(--topbar-margin-bottom);
       width: 100%;
     }
 
@@ -1426,7 +1419,7 @@
       .row { grid-template-columns: 40px 1fr; }
       .row .row-detail { grid-column: 2; text-align: left; }
       .cta-block { grid-template-columns: 1fr; gap: 1.5rem; }
-      .slide { padding: 5vh 6vw 10vh; }
+      .slide { padding: 5vh var(--slide-pad-x) 10vh; }
     }
   </style>
 </head>
